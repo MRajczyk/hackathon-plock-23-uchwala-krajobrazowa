@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from "vue";
-import adresy_strefa from "./adresy_strefa";
 
 const zones = ['Obszar 1', 'Obszar 2', 'Obszar 3'];
 const carriers = [
@@ -30,12 +29,12 @@ function fetchZone() {
 
   if(failedZoneFetch.value) {
     zone.value = zones[0];
+    step.value = 1;
   }
   else {
     zone.value = 'Obszar ' + result[0].UK_ID;
+    step.value = 2;
   }
-
-  step.value = 2;
 }
 
 </script>
@@ -55,6 +54,7 @@ function fetchZone() {
 
       <input type="button" value="Znajdź strefę" @click="fetchZone" >
     </div>
+    <br>
 
     <div v-if="step > 1">
       <div>
