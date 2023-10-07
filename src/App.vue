@@ -35,13 +35,15 @@ const street = ref('');
 const buildingNumber = ref('');
 const failedZoneFetch = ref(false);
 
-const zone = ref(zones[0]);
+const zone = ref("");
 const carrier = ref("");
 const location = ref("");
 const type = ref("");
 
 const height = ref("");
 const width = ref("");
+
+const showTabsFlag = ref(0);
 
 function isValidAd(zone, carrier, placement, type, height, width) { //todo: rename
   let area;
@@ -99,64 +101,85 @@ function fetchZone() {
   }
 }
 
+function setShowTabsFlag(value) {
+  showTabsFlag.value = value;
+}
+
 </script>
 
 <template>
   <header>
   </header>
   <main>
-    <div>
-      <label for="street">Ulica</label>
-      <input id="street" name="street" v-model="street">
-      <br>
-
-      <label>Numer budynku</label>
-      <input name="building_nb" type="number" v-model="buildingNumber">
-      <br>
-
-      <button @click="fetchZone">Znajdź strefę</button>
-    </div>
-    <br>
-
-    <div>
+    <div class="check-ad-container">
+      <h1>SPRAWDŹ LEGALNOŚĆ REKLAMY</h1>
       <div>
-        <p v-if="failedZoneFetch">Nie znaleziono strefy. Wybierz strefę manualnie.</p>
-        <label>Strefa</label>
-        <select name="zone" v-model="zone">
+        <div style="display:flex; width: 100%; align-items: center">
+          <label style="display: block">Strefa</label>
+          <button style="line-height: 10px; font-size: 10px; margin-left:25px;" @click="setShowTabsFlag(1)">Znajdź po adresie</button>&nbsp;
+          <button style="line-height: 10px; font-size: 10px;" @click="setShowTabsFlag(2)">Znajdź na mapie</button>
+        </div>
+        <select style="margin-bottom: 5px" name="zone" v-model="zone">
           <option v-for="zone in zones" :value="zone">Obszar {{zone}}</option>
         </select>
       </div>
+      <p v-if="showTabsFlag!==0" style="border-bottom: 1px solid #D6D6D6; margin-bottom: 10px; margin-top: 10px"></p>
+      <div v-if="showTabsFlag===1">
+        <label style="display: block;" for="street">Ulica</label>
+        <input id="street" name="street" v-model="street">
+        <br>
 
+        <label style="display: block; margin-top: 10px;">Numer budynku</label>
+        <input name="building_nb" type="number" v-model="buildingNumber">
+        <br>
+        <button style="display: flex; align-items: center; margin-top: 12px; line-height: 20px" @click="fetchZone">
+          <span style="font-size: 13px">Znajdź strefę</span>
+          <img src="/search.png" style="margin-left:10px; height: 16px;" alt="survey icon"/>
+        </button>
+        <p v-if="failedZoneFetch">Nie znaleziono strefy. Wybierz strefę manualnie.</p>
+      </div>
+      <div v-if="showTabsFlag===2">
+        MAPA
+      </div>
+      <p style="border-bottom: 1px solid #D6D6D6; margin-bottom: 10px; margin-top: 10px"></p>
       <div>
-        <label>Nośnik</label>
+        <label style="display:block">Nośnik</label>
         <select name="carrier" v-model="carrier">
           <option v-for="c in carriers">{{c}}</option>
         </select>
       </div>
 
       <div v-if="carrier === 'Szyldy' || carrier.startsWith('tablice')">
-        <label>Lokalizacja</label>
+        <label style="display:block">Lokalizacja</label>
         <select name="location" v-model="location">
           <option v-for="l in locations">{{l}}</option>
         </select>
       </div>
 
       <div>
-        <label>Typ</label>
+        <label style="display:block">Typ</label>
         <select name="types" v-model="type">
           <option v-for="l in types">{{l}}</option>
         </select>
       </div>
 
       <div>
-        <label>Wysokość</label>
+        <label style="display:block">Wysokość</label>
         <input type="number" v-model="height" min="0"><br>
-        <label>Szerokość</label>
+      </div>
+
+      <div>
+        <label style="display:block">Szerokość</label>
         <input type="number" v-model="width" min="0"><br>
         <br>
-        <button @click="isValidAd(zone, carrier, location, type, height, width)">Sprawdź</button>
+        <button style="display: flex; align-items: center" @click="isValidAd(zone, carrier, location, type, height, width)">
+          <span>Sprawdź</span>
+          <img src="/survey.png" style="margin-left:10px;" alt="survey icon"/>
+        </button>
         <p>{{result}}</p>
       </div>
+      <p style="border-bottom: 1px solid #D6D6D6; margin-bottom: 10px; margin-top: 10px"></p>
+      <a href="https://nowy.plock.eu/slowniczek/">Nie rozumiesz czegoś? Sprawdź słowniczek!</a>
     </div>
   </main>
 </template>
@@ -164,8 +187,28 @@ function fetchZone() {
 <style scoped>
   * {
     font-family: 'Source Sans Pro',sans-serif;
+    font-size: 16px;
+    font-weight: 400;
     background-color: #fff;
     outline: none;
+    color: #656666;
+  }
+
+  h1 {
+    color: #182A2F;
+    font-size: 54px;
+    font-weight: 900;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .check-ad-container {
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    padding: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
   }
 
   main {
@@ -179,6 +222,7 @@ function fetchZone() {
     color: #666;
     font-weight: 300;
     border: 1px solid rgba(0, 0, 0, 0.125);
+    text-transform: uppercase;
   }
 
   button:hover {
@@ -205,6 +249,9 @@ function fetchZone() {
   }
 
   select {
+    box-sizing: border-box;
+    height: 24px;
+    margin-top: 5px;
     border-color: rgba(0, 0, 0, 0.125);
     border-style: solid;
     border-bottom-width: 0.0625rem;
@@ -216,6 +263,9 @@ function fetchZone() {
   }
 
   input {
+    box-sizing: border-box;
+    height: 24px;
+    margin-top: 5px;
     border-color: #ced4da;
     border-style: solid;
     border-bottom-width: 0.0625rem;
