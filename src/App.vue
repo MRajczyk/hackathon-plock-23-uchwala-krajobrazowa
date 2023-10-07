@@ -29,7 +29,6 @@ const carriers = [
 const locations = ['na budynkach', 'na obiektach', 'wolnostojące'];
 const types = ['Słup ogłoszeniowo-reklamowy', 'Gablota ekspozycyjna typu City Light Poster (CLP)', 'Stojak reklamowy - sztaluga', 'Stojak reklamowy - potykacz', 'Billboard'];
 
-const step = ref(1);
 const result = ref("");
 
 const street = ref('');
@@ -94,11 +93,9 @@ function fetchZone() {
 
   if(failedZoneFetch.value) {
     zone.value = zones[0];
-    step.value = 1;
   }
   else {
     zone.value = result[0].UK_ID;
-    step.value = 2;
   }
 }
 
@@ -121,7 +118,7 @@ function fetchZone() {
     </div>
     <br>
 
-    <div v-if="step > 1">
+    <div>
       <div>
         <p v-if="failedZoneFetch">Nie znaleziono strefy. Wybierz strefę manualnie.</p>
         <label>Strefa</label>
@@ -182,6 +179,10 @@ function fetchZone() {
     color: #666;
     font-weight: 300;
     border: 1px solid rgba(0, 0, 0, 0.125);
+  }
+
+  button:hover {
+    cursor: pointer;
   }
 
   button::after {
