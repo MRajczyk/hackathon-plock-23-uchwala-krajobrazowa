@@ -109,15 +109,15 @@ function fetchZone() {
   </header>
   <main>
     <div>
-      <label>Ulica</label>
-      <input name="street" v-model="street">
+      <label for="street">Ulica</label>
+      <input id="street" name="street" v-model="street">
       <br>
 
       <label>Numer budynku</label>
       <input name="building_nb" type="number" v-model="buildingNumber">
       <br>
 
-      <input type="button" value="Znajdź strefę" @click="fetchZone" >
+      <button @click="fetchZone">Znajdź strefę</button>
     </div>
     <br>
 
@@ -165,5 +165,62 @@ function fetchZone() {
 </template>
 
 <style scoped>
+  * {
+    font-family: 'Source Sans Pro',sans-serif;
+    background-color: #fff;
+    outline: none;
+  }
 
+  main {
+    display: block;
+  }
+
+  button {
+    line-height: 24px;
+    padding: 5px 10px;
+    position: relative;
+    color: #666;
+    font-weight: 300;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+  }
+
+  button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+  }
+
+  button:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    outline: none;
+  }
+
+  select {
+    border-color: rgba(0, 0, 0, 0.125);
+    border-style: solid;
+    border-bottom-width: 0.0625rem;
+    border-left-width: 0.0625rem;
+    border-right-width: 0.0625rem;
+    border-top-width: 0.0625rem;
+    border-radius: 0.25rem;
+    outline: none;
+  }
+
+  input {
+    border-color: #ced4da;
+    border-style: solid;
+    border-bottom-width: 0.0625rem;
+    border-left-width: 0.0625rem;
+    border-right-width: 0.0625rem;
+    border-top-width: 0.0625rem;
+    border-radius: 0.25rem;
+  }
 </style>
