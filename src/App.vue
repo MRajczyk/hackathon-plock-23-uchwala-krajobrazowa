@@ -19,14 +19,15 @@ onMounted(() => {
       });
 })
 
-const zones = ['Obszar 1', 'Obszar 2', 'Obszar 3'];
+const zones = [1, 2, 3];
 const carriers = [
-  'Tablice i urządzenia reklamowe',
+  'tablice',
   'Szyldy',
   'Obiekty małej architektury',
   'Ogrodzenia'
 ];
-const locations = ['Na budynkach', 'Na obiektach', 'Wolnostojące'];
+const locations = ['na budynkach', 'na obiektach', 'wolnostojące'];
+const types = ['Słup ogłoszeniowo-reklamowy', 'Gablota ekspozycyjna typu City Light Poster (CLP)', 'Stojak reklamowy - sztaluga', 'Stojak reklamowy - potykacz', 'Billboard'];
 
 const step = ref(1);
 const result = ref("");
@@ -36,8 +37,12 @@ const buildingNumber = ref('');
 const failedZoneFetch = ref(false);
 
 const zone = ref(zones[0]);
-const carrier = ref(carriers[0]);
-const location = ref(locations[0]);
+const carrier = ref("");
+const location = ref("");
+const type = ref("");
+
+const height = ref("");
+const width = ref("");
 
 function isValidAd(zone, carrier, placement, type, height, width) { //todo: rename
   let area;
@@ -50,33 +55,37 @@ function isValidAd(zone, carrier, placement, type, height, width) { //todo: rena
       criterion.carrier === carrier &&
       criterion.placement === placement &&
       criterion.type === type
-  )
+  );
 
   if(filteredCriteria.length !== 1) {
-    return false;
+    result.value = "Reklama nie spełnia wymagań";
+    return null;
   }
 
   const criterion = filteredCriteria[0];
 
   if(criterion.height && (criterion.height < height)) {
-    return false;
+    result.value = "Reklama nie spełnia wymagań";
+    return;
   }
   if(criterion.width && (criterion.width < width)) {
-    return false;
+    result.value = "Reklama nie spełnia wymagań";
+    return;
   }
 
   if(criterion.minArea && (criterion.minArea > area)) {
-    return false;
+    result.value = "Reklama nie spełnia wymagań";
+    return;
   }
   if(criterion.maxArea && (criterion.maxArea < area)) {
-    return false;
+    result.value = "Reklama nie spełnia wymagań";
+    return;
   }
 
-  return true;
+  result.value = criterion.conditions;
 }
 
 function fetchZone() {
-  console.log(isValidAd(2, "tablice", "wolnostojące", "Billboard", 6, 1))
   const result = adresyStrefa.filter(element => {
     return (element.ULIC_NAZWA === street.value) && (element.NUMER == buildingNumber.value);
   });
@@ -88,7 +97,7 @@ function fetchZone() {
     step.value = 1;
   }
   else {
-    zone.value = 'Obszar ' + result[0].UK_ID;
+    zone.value = result[0].UK_ID;
     step.value = 2;
   }
 }
@@ -117,7 +126,7 @@ function fetchZone() {
         <p v-if="failedZoneFetch">Nie znaleziono strefy. Wybierz strefę manualnie.</p>
         <label>Strefa</label>
         <select name="zone" v-model="zone">
-          <option v-for="zone in zones">{{zone}}</option>
+          <option v-for="zone in zones" :value="zone">Obszar {{zone}}</option>
         </select>
       </div>
 
@@ -128,11 +137,28 @@ function fetchZone() {
         </select>
       </div>
 
-      <div v-if="carrier === 'Szyldy' || carrier.startsWith('Tablice')">
+      <div v-if="carrier === 'Szyldy' || carrier.startsWith('tablice')">
         <label>Lokalizacja</label>
         <select name="location" v-model="location">
           <option v-for="l in locations">{{l}}</option>
         </select>
+      </div>
+
+      <div>
+        <label>Typ</label>
+        <select name="types" v-model="type">
+          <option v-for="l in types">{{l}}</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Wysokość</label>
+        <input type="number" v-model="height" min="0"><br>
+        <label>Szerokość</label>
+        <input type="number" v-model="width" min="0"><br>
+        <br>
+        <button @click="isValidAd(zone, carrier, location, type, height, width)">Sprawdź</button>
+        <p>{{result}}</p>
       </div>
     </div>
   </main>
