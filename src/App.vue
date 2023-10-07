@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import axios from "axios";
+import criteria from "./kryteria";
 
 let adresyStrefa;
 
@@ -28,6 +29,7 @@ const carriers = [
 const locations = ['Na budynkach', 'Na obiektach', 'Wolnostojące'];
 
 const step = ref(1);
+const result = ref("");
 
 const street = ref('');
 const buildingNumber = ref('');
@@ -37,7 +39,44 @@ const zone = ref(zones[0]);
 const carrier = ref(carriers[0]);
 const location = ref(locations[0]);
 
+function isValidAd(zone, carrier, placement, type, height, width) { //todo: rename
+  let area;
+  if(height && width) {
+    area = height * width;
+  }
+
+  const filteredCriteria = criteria.filter(criterion =>
+      criterion.zone === zone &&
+      criterion.carrier === carrier &&
+      criterion.placement === placement &&
+      criterion.type === type
+  )
+
+  if(filteredCriteria.length !== 1) {
+    return false;
+  }
+
+  const criterion = filteredCriteria[0];
+
+  if(criterion.height && (criterion.height < height)) {
+    return false;
+  }
+  if(criterion.width && (criterion.width < width)) {
+    return false;
+  }
+
+  if(criterion.minArea && (criterion.minArea > area)) {
+    return false;
+  }
+  if(criterion.maxArea && (criterion.maxArea < area)) {
+    return false;
+  }
+
+  return true;
+}
+
 function fetchZone() {
+  console.log(isValidAd(2, "tablice", "wolnostojące", "Billboard", 6, 1))
   const result = adresyStrefa.filter(element => {
     return (element.ULIC_NAZWA === street.value) && (element.NUMER == buildingNumber.value);
   });

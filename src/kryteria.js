@@ -1,13 +1,13 @@
-const kryteria = [
+const criteria = [
     {
         "zone": 3,
         "carrier": "tablice",
         "placement": "wolnostojące",
         "type": "Słup ogłoszeniowo-reklamowy",
-        "eight": 4,
+        "height": 4,
         "width": 1.50,
-        "minArea": "",
-        "maxArea": "",
+        "minArea": null,
+        "maxArea": null,
         "conditions": "nieprzenośny, fundament poniżej poziomu terenu;maksymalna całkowita wysokość słupa - 4,0 m;maksymalna szerokość boku prostopadłościanu lub średnica walca - 1,5 m mierzona na wysokości części ekspozycyjnej;Montaż przy zachowaniu co najmniej 50,0 m odległości pomiędzy słupami;"
     },
     {
@@ -17,8 +17,8 @@ const kryteria = [
         "type": "Gablota ekspozycyjna typu City Light Poster (CLP)",
         "height": 1.2,
         "width": 1.80,
-        "minArea": "",
-        "maxArea": "",
+        "minArea": null,
+        "maxArea": null,
         "conditions": "nieprzenośna, fundament poniżej poziomu terenu;pole powierzchni służącej ekspozycji reklamy w formacie „euro size”;montaż przy zachowaniu co najmniej 30,0 m odległości pomiędzy gablotami; dopuszcza się zmniejszenie odległości, w sytuacji gdy kilka gablot stanowi spójnie zaprojektowaną grupę, przewidzianą w obrębie danej przestrzeni miejskiej;dopuszcza się gabloty ekspozycyjne typu CLP zintegrowane z wiatą przystankową, z wykluczeniem gablot przesłaniających wiaty od strony najazdowej;dopuszcza się gabloty ekspozycyjne typu CLP w formie ekranów świetlnych reklamowych;"
     },
     {
@@ -27,9 +27,9 @@ const kryteria = [
         "placement": "wolnostojące",
         "type": "Stojak reklamowy - sztaluga",
         "height": 1.6,
-        "width": "",
-        "minArea": "",
-        "maxArea": "",
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
         "conditions": "przenośny;w formie pojedynczej tablicy pełnej, ustawionej na sztaludze, o całkowitej wysokości do 1,6 m lub w formie potykacza o całkowitej wysokości do 1,2 m;konstrukcja stojaka wykonana z drewna lub metalu;"
     },
     {
@@ -38,9 +38,9 @@ const kryteria = [
         "placement": "wolnostojące",
         "type": "Stojak reklamowy - potykacz",
         "height": 1.2,
-        "width": "",
-        "minArea": "",
-        "maxArea": "",
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
         "conditions": "przenośny;w formie pojedynczej tablicy pełnej, ustawionej na sztaludze, o całkowitej wysokości do 1,6 m lub w formie potykacza o całkowitej wysokości do 1,2 m;konstrukcja stojaka wykonana z drewna lub metalu;"
     },
     {
@@ -48,8 +48,8 @@ const kryteria = [
         "carrier": "tablice",
         "placement": "wolnostojące",
         "type": "Gablota ekspozycyjna z menu prezentująca ofertę lokalu gastronomicznego",
-        "height": "",
-        "width": "",
+        "height": null,
+        "width": null,
         "minArea": 0.25,
         "maxArea": 0.5,
         "conditions": "przenośna;maksymalne pole powierzchni służącej ekspozycji reklamy nie większe od formatu drobnego;konstrukcja gabloty wykonana z drewna lub metalu;"
@@ -60,9 +60,9 @@ const kryteria = [
         "placement": "wolnostojące",
         "type": "Tablica reklamowa na elementach wyposażenia sezonowych ogródków gastronomicznych",
         "height": 0.2,
-        "width": "",
-        "minArea": "",
-        "maxArea": "",
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
         "conditions": "przenośna;Montaż na lambrekinie zadaszenia ogródka, lambrekinie parasola, rollbarze, przęśle ogrodzenia, donicy wolnostojącej, krześle, stole czy leżaku oraz na lambrekinie markizy lub zadaszenia kramu ulicznego;w formie monochromatycznych znaków bez tła;maksymalna wysokość znaków - 0,20 m;"
     },
     {
@@ -70,10 +70,10 @@ const kryteria = [
         "carrier": "tablice",
         "placement": "wolnostojące",
         "type": "Reklama okolicznościowa",
-        "height": "",
-        "width": "",
-        "minArea": "",
-        "maxArea": "",
+        "height": null,
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
         "conditions": "przenośna;w formie ekspozytora, stojaka reklamowego, windera, plakatu, carriera pneumatycznego o powierzchni służącej ekspozycji reklamy maksymalnie formatu średniego, banera reklamowego o powierzchni służącej ekspozycji reklamy maksymalnie formatu średniego, ekranu projekcyjnego reklamowego i ekranu świetlnego reklamowego;;Ustawiona wyłącznie na terenie organizacji wydarzenia;Eksponowana podczas trwania wydarzenia lecz nie dłużej niż przez 21;"
     },
     {
@@ -81,8 +81,8 @@ const kryteria = [
         "carrier": "tablice",
         "placement": "wolnostojące",
         "type": "Gablota ekspozycyjna",
-        "height": "",
-        "width": "",
+        "height": null,
+        "width": null,
         "minArea": 0.50,
         "maxArea": 3,
         "conditions": "nieprzenośna, fundament poniżej poziomu terenu;maksymalne pole powierzchni służącej ekspozycji reklamy formatu małego;należy zachować co najmniej 30,0 m odległości pomiędzy gablotami; dopuszcza się zmniejszenie odległości, w sytuacji gdy kilka gablot stanowi spójnie zaprojektowaną grupę, przewidzianą w obrębie danej przestrzeni miejskiej;"
@@ -93,9 +93,9 @@ const kryteria = [
         "placement": "wolnostojące",
         "type": "Flaga reklamowa zlokalizowana na maszcie",
         "height": 12,
-        "width": "",
-        "minArea": "",
-        "maxArea": "",
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
         "conditions": "nieprzenośna, fundament poniżej poziomu terenu;maksymalne wymiary flagi równe 6,0 m x 2,0 m;maksymalna wysokość masztu równą 12,0 m, lecz nie większa niż najwyższy budynek znajdujący się na danej nieruchomości;montaż na maszcie w układzie pionowym;Montaż w minimalnej odległość od granicy frontu terenu równej 5,0 m;"
     },
     {
@@ -105,8 +105,8 @@ const kryteria = [
         "type": "Pylon reklamowy",
         "height": 8,
         "width": 2.00,
-        "minArea": "",
-        "maxArea": "",
+        "minArea": null,
+        "maxArea": null,
         "conditions": "nieprzenośny, fundament poniżej poziomu terenu;maksymalna całkowita wysokość pylonu – 8,0 m;maksymalna szerokość pylonu - 2,0 m;możliwość lokalizacji na pylonie tablic reklamowych lub urządzeń reklamowych w formie tablic pełnych, znaków bez tła, znaków przestrzennych lub kasetonów stanowiących całościową kompozycję pod względem formy, wymiarów, kolorystyki tła i materiału wykonania;Montaż bezpośrednio w pobliżu wjazdu na teren lub przy wejściu do budynku;Montaż w minimalnej odległości od granicy działki równej 3,0 m;montaż przy zachowaniu co najmniej 50,0 m odległości pomiędzy pylonami;"
     },
     {
@@ -115,7 +115,7 @@ const kryteria = [
         "placement": "wolnostojące",
         "type": "Billboard",
         "height": 9,
-        "width": "",
+        "width": null,
         "minArea": 12.00,
         "maxArea": 18,
         "conditions": "nieprzenośny, fundament poniżej poziomu terenu;maksymalna całkowita wysokość pylonu – 8,0 m;maksymalna szerokość pylonu - 2,0 m;możliwość lokalizacji na pylonie tablic reklamowych lub urządzeń reklamowych w formie tablic pełnych, znaków bez tła, znaków przestrzennych lub kasetonów stanowiących całościową kompozycję pod względem formy, wymiarów, kolorystyki tła i materiału wykonania;Montaż bezpośrednio w pobliżu wjazdu na teren lub przy wejściu do budynku;Montaż w minimalnej odległości od granicy działki równej 3,0 m;montaż przy zachowaniu co najmniej 50,0 m odległości pomiędzy pylonami;nieprzenośny, fundament poniżej poziomu terenu;pole powierzchni służącej ekspozycji reklamy formatu dużego;maksymalna wysokości billboardu – 9,0 m;minimalna odległość dolnej krawędzi billboardu od poziomu terenu – 3,5 m;montaż z zachowaniem między płaszczyzną ekspozycji a frontem działki ewidencyjnej, od strony przestrzeni dostępnej publicznie dróg, ulic i placów miejskich kąta mieszczącego się w przedziale od 60 stopni do 120 stopni;montaż w przestrzeni zawierającej się w odległości od 1,0 do 15,0 m od granicy frontu działki ewidencyjnej, od strony przestrzeni dostępnej publicznie dróg, ulic i placów miejskich;montaż na działce ewidencyjnej o minimalnej szerokości frontu równej 30,0 m; przy czym billboard należy lokalizować w odległości co najmniej 15,0 m od skrajnych punktów frontu działki ewidencyjnej, od strony przestrzeni dostępnej publicznej dróg, ulic i placów miejskich – nie dotyczy działki narożnej;dopuszcza się możliwość sytuowania billboardów dwustronnych, posiadających pole powierzchni służące ekspozycji reklamy formatu dużego, z obu stron urządzenia;montaż przy zachowaniu co najmniej 15,0 m odległości pomiędzy billboardami;"
@@ -125,9 +125,9 @@ const kryteria = [
         "carrier": "tablice",
         "placement": "wolnostojące",
         "type": "Tablica kierunkowa",
-        "height": "",
-        "width": "",
-        "minArea": "",
+        "height": null,
+        "width": null,
+        "minArea": null,
         "maxArea": 1,
         "conditions": "nieprzenośna, fundament poniżej poziomu terenu;w formie tablicy płaskiej, wykonanej na podkładzie ze sztywnego i trwałego materiału;Maksymalne pole powierzchni służącej ekspozycji reklamy - 1,0 m2;w formie tablicy płaskiej, stanowiącej panel tablicy kierującej kierowców w Systemie Informacji Miejskiej;Montaż wyłącznie dla działalności gospodarczej oddalonej od głównych ciągów komunikacyjnych;"
     },
@@ -137,7 +137,7 @@ const kryteria = [
         "placement": "wolnostojące",
         "type": "Totem reklamowy",
         "height": 25,
-        "width": "",
+        "width": null,
         "minArea": 12.00,
         "maxArea": 18,
         "conditions": "nieprzenośny;maksymalne pole powierzchni służącej ekspozycji reklamy formatu dużego;pole powierzchni służącej ekspozycji reklamy należy umieścić w górnej części konstrukcji urządzenia reklamowego;maksymalna wysokości totemu - 25,0 m;minimalną odległość dolnej krawędzi powierzchni służącej ekspozycji reklamy od poziomu terenu - 15 m;należy zachować co najmniej 5,0 m odległości od granicy działki;należy zachować co najmniej 100,0 m odległości pomiędzy totemami;"
@@ -149,8 +149,8 @@ const kryteria = [
         "type": "Słup ogłoszeniowo-reklamowy",
         "height": 4,
         "width": 1.50,
-        "minArea": "",
-        "maxArea": "",
+        "minArea": null,
+        "maxArea": null,
         "conditions": "nieprzenośny, fundament poniżej poziomu terenu;maksymalna całkowita wysokość słupa - 4,0 m;maksymalna szerokość boku prostopadłościanu lub średnica walca - 1,5 m mierzona na wysokości części ekspozycyjnej;Montaż przy zachowaniu co najmniej 50,0 m odległości pomiędzy słupami;"
     },
     {
@@ -160,8 +160,8 @@ const kryteria = [
         "type": "Gablota ekspozycyjna typu City Light Poster (CLP)",
         "height": 1.2,
         "width": 1.80,
-        "minArea": "",
-        "maxArea": "",
+        "minArea": null,
+        "maxArea": null,
         "conditions": "nieprzenośna, fundament poniżej poziomu terenu;pole powierzchni służącej ekspozycji reklamy w formacie „euro size”;montaż przy zachowaniu co najmniej 30,0 m odległości pomiędzy gablotami; dopuszcza się zmniejszenie odległości, w sytuacji gdy kilka gablot stanowi spójnie zaprojektowaną grupę, przewidzianą w obrębie danej przestrzeni miejskiej;dopuszcza się gabloty ekspozycyjne typu CLP zintegrowane z wiatą przystankową, z wykluczeniem gablot przesłaniających wiaty od strony najazdowej;dopuszcza się gabloty ekspozycyjne typu CLP w formie ekranów świetlnych reklamowych;"
     },
     {
@@ -170,9 +170,9 @@ const kryteria = [
         "placement": "wolnostojące",
         "type": "Znaki przestrzenne będące nazwą własną, logo lub logotypem podmiotu, inwestora zagospodarowania przestrzeni publicznej lub przestrzeni rekreacyjnej",
         "height": 3,
-        "width": "",
-        "minArea": "",
-        "maxArea": "",
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
         "conditions": "nieprzenośne, fundament poniżej poziomu terenu;maksymalna wysokość znaków - 3,0 m;znaki należy lokalizować na terenie założenia, które ma charakter powierzchniowy, w sposób wynikający z aranżacji zagospodarowania otoczenia;"
     },
     {
@@ -181,9 +181,9 @@ const kryteria = [
         "placement": "wolnostojące",
         "type": "Stojak reklamowy - sztaluga",
         "height": 1.6,
-        "width": "",
-        "minArea": "",
-        "maxArea": "",
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
         "conditions": "przenośny;w formie pojedynczej tablicy pełnej, ustawionej na sztaludze, o całkowitej wysokości do 1,6 m lub w formie potykacza o całkowitej wysokości do 1,2 m;konstrukcja stojaka wykonana z drewna lub metalu;"
     },
     {
@@ -192,9 +192,9 @@ const kryteria = [
         "placement": "wolnostojące",
         "type": "Stojak reklamowy - potykacz",
         "height": 1.2,
-        "width": "",
-        "minArea": "",
-        "maxArea": "",
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
         "conditions": "przenośny;w formie pojedynczej tablicy pełnej, ustawionej na sztaludze, o całkowitej wysokości do 1,6 m lub w formie potykacza o całkowitej wysokości do 1,2 m;konstrukcja stojaka wykonana z drewna lub metalu;"
     },
     {
@@ -202,8 +202,8 @@ const kryteria = [
         "carrier": "tablice",
         "placement": "wolnostojące",
         "type": "Gablota ekspozycyjna z menu prezentująca ofertę lokalu gastronomicznego",
-        "height": "",
-        "width": "",
+        "height": null,
+        "width": null,
         "minArea": 0.25,
         "maxArea": 0.5,
         "conditions": "przenośna;maksymalne pole powierzchni służącej ekspozycji reklamy nie większe od formatu drobnego;konstrukcja gabloty wykonana z drewna lub metalu;"
@@ -214,9 +214,9 @@ const kryteria = [
         "placement": "wolnostojące",
         "type": "Tablica reklamowa na elementach wyposażenia sezonowych ogródków gastronomicznych",
         "height": 0.2,
-        "width": "",
-        "minArea": "",
-        "maxArea": "",
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
         "conditions": "przenośna;Montaż na lambrekinie zadaszenia ogródka, lambrekinie parasola, rollbarze, przęśle ogrodzenia, donicy wolnostojącej, krześle, stole czy leżaku oraz na lambrekinie markizy lub zadaszenia kramu ulicznego;w formie monochromatycznych znaków bez tła;maksymalna wysokość znaków - 0,20 m;"
     },
     {
@@ -224,10 +224,10 @@ const kryteria = [
         "carrier": "tablice",
         "placement": "wolnostojące",
         "type": "Reklama okolicznościowa",
-        "height": "",
-        "width": "",
-        "minArea": "",
-        "maxArea": "",
+        "height": null,
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
         "conditions": "przenośna;w formie ekspozytora, stojaka reklamowego, windera, plakatu, carriera pneumatycznego o powierzchni służącej ekspozycji reklamy maksymalnie formatu średniego, banera reklamowego o powierzchni służącej ekspozycji reklamy maksymalnie formatu średniego, ekranu projekcyjnego reklamowego i ekranu świetlnego reklamowego;;Ustawiona wyłącznie na terenie organizacji wydarzenia;Eksponowana podczas trwania wydarzenia lecz nie dłużej niż przez 21;"
     },
     {
@@ -235,8 +235,8 @@ const kryteria = [
         "carrier": "tablice",
         "placement": "wolnostojące",
         "type": "Gablota ekspozycyjna",
-        "height": "",
-        "width": "",
+        "height": null,
+        "width": null,
         "minArea": 0.50,
         "maxArea": 3,
         "conditions": "nieprzenośna, fundament poniżej poziomu terenu;maksymalne pole powierzchni służącej ekspozycji reklamy formatu małego;należy zachować co najmniej 30,0 m odległości pomiędzy gablotami; dopuszcza się zmniejszenie odległości, w sytuacji gdy kilka gablot stanowi spójnie zaprojektowaną grupę, przewidzianą w obrębie danej przestrzeni miejskiej;"
@@ -247,9 +247,9 @@ const kryteria = [
         "placement": "wolnostojące",
         "type": "Flaga reklamowa zlokalizowana na maszcie",
         "height": 8,
-        "width": "",
-        "minArea": "",
-        "maxArea": "",
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
         "conditions": "nieprzenośna, fundament poniżej poziomu terenu;maksymalne wymiary flagi równe 4,0 m x 2,0 m;maksymalna wysokość masztu równą 8,0 m, lecz nie większa niż najwyższy budynek znajdujący się na danej nieruchomości;montaż na maszcie w układzie pionowym;Montaż w minimalnej odległość od granicy frontu terenu równej 1,0 m;"
     },
     {
@@ -259,8 +259,8 @@ const kryteria = [
         "type": "Pylon reklamowy",
         "height": 8,
         "width": 2.00,
-        "minArea": "",
-        "maxArea": "",
+        "minArea": null,
+        "maxArea": null,
         "conditions": "nieprzenośny, fundament poniżej poziomu terenu;maksymalna całkowita wysokość pylonu – 8,0 m;maksymalna szerokość pylonu - 2,0 m;możliwość lokalizacji na pylonie tablic reklamowych lub urządzeń reklamowych w formie tablic pełnych, znaków bez tła, znaków przestrzennych lub kasetonów stanowiących całościową kompozycję pod względem formy, wymiarów, kolorystyki tła i materiału wykonania;Montaż bezpośrednio w pobliżu wjazdu na teren lub przy wejściu do budynku;Montaż w minimalnej odległości od granicy działki równej 1,0 m;montaż przy zachowaniu co najmniej 50,0 m odległości pomiędzy pylonami;"
     },
     {
@@ -269,9 +269,9 @@ const kryteria = [
         "placement": "wolnostojące",
         "type": "Billboard",
         "height": 6,
-        "width": "",
-        "minArea": "",
-        "maxArea": "",
+        "width": null,
+        "minArea": 12,
+        "maxArea": 18,
         "conditions": "nieprzenośny, fundament poniżej poziomu terenu;pole powierzchni służącej ekspozycji reklamy formatu średniego;maksymalna wysokości billboardu – 6,0 m;minimalna odległość dolnej krawędzi billboardu od poziomu terenu - 2,5 m;montaż z zachowaniem między płaszczyzną ekspozycji a frontem działki ewidencyjnej, od strony przestrzeni dostępnej publicznie dróg, ulic i placów miejskich kąta mieszczącego się w przedziale od 60 stopni do 120 stopni;montaż w przestrzeni zawierającej się w odległości od 1,0 do 15,0 m od granicy frontu działki ewidencyjnej, od strony przestrzeni dostępnej publicznie dróg, ulic i placów miejskich;montaż na działce ewidencyjnej o minimalnej szerokości frontu równej 30,0 m; przy czym billboard należy lokalizować w odległości co najmniej 15,0 m od skrajnych punktów frontu działki ewidencyjnej, od strony przestrzeni dostępnej publicznej dróg, ulic i placów miejskich – nie dotyczy działki narożnej;dopuszcza się możliwość sytuowania zamiennie maksymalnie czterech billboardów o polu powierzchni służącej ekspozycji reklamy równym 3,0 m2 i wysokości do 3,0 m;dopuszcza się możliwość sytuowania billboardów dwustronnych, posiadających pole powierzchni służące ekspozycji reklamy formatu średniego, z obu stron urządzenia;montaż przy zachowaniu co najmniej 15,0 m odległości pomiędzy billboardami;"
     },
     {
@@ -279,9 +279,9 @@ const kryteria = [
         "carrier": "tablice",
         "placement": "wolnostojące",
         "type": "Tablica kierunkowa",
-        "height": "",
-        "width": "",
-        "minArea": "",
+        "height": null,
+        "width": null,
+        "minArea": null,
         "maxArea": 1,
         "conditions": "nieprzenośna, fundament poniżej poziomu terenu;w formie tablicy płaskiej, wykonanej na podkładzie ze sztywnego i trwałego materiału;Maksymalne pole powierzchni służącej ekspozycji reklamy - 1,0 m2;w formie tablicy płaskiej, stanowiącej panel tablicy kierującej kierowców w Systemie Informacji Miejskiej;Montaż wyłącznie dla działalności gospodarczej oddalonej od głównych ciągów komunikacyjnych;"
     },
@@ -291,7 +291,7 @@ const kryteria = [
         "placement": "wolnostojące",
         "type": "Totem reklamowy",
         "height": 25,
-        "width": "",
+        "width": null,
         "minArea": 12,
         "maxArea": 18,
         "conditions": "nieprzenośny, fundament poniżej poziomu terenu;maksymalne pole powierzchni służącej ekspozycji reklamy formatu dużego;pole powierzchni służącej ekspozycji reklamy należy umieścić w górnej części konstrukcji urządzenia reklamowego;maksymalna wysokości totemu - 25,0 m;minimalną odległość dolnej krawędzi powierzchni służącej ekspozycji reklamy od poziomu terenu - 15 m;należy zachować co najmniej 5,0 m odległości od granicy działki;należy zachować co najmniej 100,0 m odległości pomiędzy totemami;"
@@ -303,8 +303,8 @@ const kryteria = [
         "type": "Słup ogłoszeniowo-reklamowy",
         "height": 4,
         "width": 1.5,
-        "minArea": "",
-        "maxArea": "",
+        "minArea": null,
+        "maxArea": null,
         "conditions": "nieprzenośny, fundament poniżej poziomu terenu;maksymalna całkowita wysokość słupa - 4,0 m;maksymalna szerokość boku prostopadłościanu lub średnica walca - 1,5 m mierzona na wysokości części ekspozycyjnej;Montaż przy zachowaniu co najmniej 50,0 m odległości pomiędzy słupami;"
     },
     {
@@ -314,8 +314,8 @@ const kryteria = [
         "type": "Gablota ekspozycyjna typu City Light Poster (CLP)",
         "height": 1.2,
         "width": 1.8,
-        "minArea": "",
-        "maxArea": "",
+        "minArea": null,
+        "maxArea": null,
         "conditions": "nieprzenośna, fundament poniżej poziomu terenu;pole powierzchni służącej ekspozycji reklamy w formacie „euro size”;montaż przy zachowaniu co najmniej 30,0 m odległości pomiędzy gablotami; dopuszcza się zmniejszenie odległości, w sytuacji gdy kilka gablot stanowi spójnie zaprojektowaną grupę, przewidzianą w obrębie danej przestrzeni miejskiej;dopuszcza się gabloty ekspozycyjne typu CLP zintegrowane z wiatą przystankową, z wykluczeniem gablot przesłaniających wiaty od strony najazdowej;dopuszcza się gabloty ekspozycyjne typu CLP w formie ekranów świetlnych reklamowych;"
     },
     {
@@ -324,9 +324,9 @@ const kryteria = [
         "placement": "wolnostojące",
         "type": "Znaki przestrzenne będące nazwą własną, logo lub logotypem podmiotu, inwestora zagospodarowania przestrzeni publicznej lub przestrzeni rekreacyjnej",
         "height": 3,
-        "width": "",
-        "minArea": "",
-        "maxArea": "",
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
         "conditions": "nieprzenośne, fundament poniżej poziomu terenu;maksymalna wysokość znaków - 3,0 m;znaki należy lokalizować na terenie założenia, które ma charakter powierzchniowy, w sposób wynikający z aranżacji zagospodarowania otoczenia;"
     },
     {
@@ -335,9 +335,9 @@ const kryteria = [
         "placement": "wolnostojące",
         "type": "Stojak reklamowy - sztaluga",
         "height": 1.6,
-        "width": "",
-        "minArea": "",
-        "maxArea": "",
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
         "conditions": "przenośny;w formie pojedynczej tablicy pełnej, ustawionej na sztaludze, o całkowitej wysokości do 1,6 m lub w formie potykacza o całkowitej wysokości do 1,2 m;konstrukcja stojaka wykonana z drewna lub metalu;"
     },
     {
@@ -346,9 +346,9 @@ const kryteria = [
         "placement": "wolnostojące",
         "type": "Stojak reklamowy - potykacz",
         "height": 1.2,
-        "width": "",
-        "minArea": "",
-        "maxArea": "",
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
         "conditions": "przenośny;w formie pojedynczej tablicy pełnej, ustawionej na sztaludze, o całkowitej wysokości do 1,6 m lub w formie potykacza o całkowitej wysokości do 1,2 m;konstrukcja stojaka wykonana z drewna lub metalu;"
     },
     {
@@ -356,8 +356,8 @@ const kryteria = [
         "carrier": "tablice",
         "placement": "wolnostojące",
         "type": "Gablota ekspozycyjna z menu prezentująca ofertę lokalu gastronomicznego",
-        "height": "",
-        "width": "",
+        "height": null,
+        "width": null,
         "minArea": 0.25,
         "maxArea": 0.5,
         "conditions": "przenośna;maksymalne pole powierzchni służącej ekspozycji reklamy nie większe od formatu drobnego;konstrukcja gabloty wykonana z drewna lub metalu;"
@@ -368,9 +368,9 @@ const kryteria = [
         "placement": "wolnostojące",
         "type": "Tablica reklamowa na elementach wyposażenia sezonowych ogródków gastronomicznych",
         "height": 0.2,
-        "width": "",
-        "minArea": "",
-        "maxArea": "",
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
         "conditions": "przenośna;Montaż na lambrekinie zadaszenia ogródka, lambrekinie parasola, rollbarze, przęśle ogrodzenia, donicy wolnostojącej, krześle, stole czy leżaku oraz na lambrekinie markizy lub zadaszenia kramu ulicznego;w formie monochromatycznych znaków bez tła;maksymalna wysokość znaków - 0,20 m;"
     },
     {
@@ -378,12 +378,12 @@ const kryteria = [
         "carrier": "tablice",
         "placement": "wolnostojące",
         "type": "Reklama okolicznościowa",
-        "height": "",
-        "width": "",
-        "minArea": "",
-        "maxArea": "",
+        "height": null,
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
         "conditions": "przenośna;w formie ekspozytora, stojaka reklamowego, windera, plakatu, carriera pneumatycznego o powierzchni służącej ekspozycji reklamy maksymalnie formatu średniego, banera reklamowego o powierzchni służącej ekspozycji reklamy maksymalnie formatu średniego, ekranu projekcyjnego reklamowego i ekranu świetlnego reklamowego;;Ustawiona wyłącznie na terenie organizacji wydarzenia;Eksponowana podczas trwania wydarzenia lecz nie dłużej niż przez 14;"
     }
 ]
 
-export default kryteria;
+export default criteria;
