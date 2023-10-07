@@ -2,6 +2,7 @@ const express = require('express')
 const crypto = require('node:crypto')
 const fs = require('node:fs');
 const snowflake = require('snowflake-sdk')
+const cors = require('cors')
 
 const privateKeyFile = fs.readFileSync('./keys/pkcs8.priv')
 
@@ -57,6 +58,7 @@ connection.connect(function (err, conn) {
 });
 
 const app = express()
+app.use(cors())
 const port = 3000;
 
 app.get('/health', (req, res) => {

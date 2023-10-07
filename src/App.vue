@@ -1,5 +1,22 @@
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+import axios from "axios";
+
+let adresyStrefa;
+
+onMounted(() => {
+  axios.get('http://localhost:3000/addresses')
+      .then(function (response) {
+        adresyStrefa = response.data;
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+      .finally(function () {
+        // always executed
+      });
+})
 
 const zones = ['Obszar 1', 'Obszar 2', 'Obszar 3'];
 const carriers = [
@@ -21,7 +38,7 @@ const carrier = ref(carriers[0]);
 const location = ref(locations[0]);
 
 function fetchZone() {
-  const result = adresy_strefa.filter(element => {
+  const result = adresyStrefa.filter(element => {
     return (element.ULIC_NAZWA === street.value) && (element.NUMER == buildingNumber.value);
   });
 
