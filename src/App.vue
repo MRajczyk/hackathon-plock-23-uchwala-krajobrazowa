@@ -307,8 +307,8 @@ onUnmounted(() => {
     flex-direction: column;
     gap:10px;
     padding: 20px;
-    margin-left: 100px;
-    margin-right: 100px;
+    //margin-left: 100px;
+    //margin-right: 100px;
   }
 
   main {
