@@ -2,8 +2,12 @@
 import {ref, onMounted, onUnmounted} from "vue";
 import axios from "axios";
 import criteria from "./kryteria";
+import zonesPolygons from './zones';
 
-let adresyStrefa;
+import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
+
+let adresyStrefa = [];
 
 function hideModal(event) {
   const modal = document.getElementById("myModal");
@@ -38,6 +42,21 @@ onMounted(() => {
       .finally(function () {
         // always executed
       });
+
+  const map = L.map('map').setView([51.505, -0.09], 13);
+
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+
+  zonesPolygons.forEach(elem => {
+    elem['polygon'] = L.polygon(elem.latlngs, {color: elem.color})
+        .on('click', () => zone.value = elem.id).addTo(map);
+  })
+
+  let greatestZone = zonesPolygons.reduce((max, elem) => (elem.id > max.id ? elem : max));
+  map.fitBounds(greatestZone.polygon.getBounds());
 })
 
 onUnmounted(() => {
@@ -68,11 +87,15 @@ const type = ref("");
 const height = ref("");
 const width = ref("");
 
+const result = ref(false);
+const msg = ref("");
+const conditions = ref([]);
+
 const showTabsFlag = ref(0);
 
 function isValidAd(zone, carrier, placement, type, height, width) { //todo: rename
   let area;
-  if(height && width) {
+  if (height && width) {
     area = height * width;
   }
 
@@ -83,32 +106,33 @@ function isValidAd(zone, carrier, placement, type, height, width) { //todo: rena
       criterion.type === type
   );
 
-  if(filteredCriteria.length !== 1) {
+  if (filteredCriteria.length !== 1) {
     result.value = "Reklama nie spełnia wymagań";
-    return null;
+    return false;
   }
 
   const criterion = filteredCriteria[0];
 
-  if(criterion.height && (criterion.height < height)) {
-    result.value = "Reklama nie spełnia wymagań";
-    return;
+  if (criterion.height && (criterion.height < height)) {
+    msg.value = "Reklama nie spełnia wymagań";
+    return false;
   }
-  if(criterion.width && (criterion.width < width)) {
-    result.value = "Reklama nie spełnia wymagań";
-    return;
-  }
-
-  if(criterion.minArea && (criterion.minArea > area)) {
-    result.value = "Reklama nie spełnia wymagań";
-    return;
-  }
-  if(criterion.maxArea && (criterion.maxArea < area)) {
-    result.value = "Reklama nie spełnia wymagań";
-    return;
+  if (criterion.width && (criterion.width < width)) {
+    msg.value = "Reklama nie spełnia wymagań";
+    return false;
   }
 
-  result.value = criterion.conditions;
+  if (criterion.minArea && (criterion.minArea > area)) {
+    msg.value = "Reklama nie spełnia wymagań";
+    return false;
+  }
+  if (criterion.maxArea && (criterion.maxArea < area)) {
+    msg.value = "Reklama nie spełnia wymagań";
+    return false;
+  }
+
+  conditions.value = criterion.conditions.split(';');
+  return true;
 }
 
 function fetchZone() {
@@ -118,7 +142,7 @@ function fetchZone() {
 
   failedZoneFetch.value = result.length !== 1;
 
-  if(failedZoneFetch.value) {
+  if (failedZoneFetch.value) {
     zone.value = zones[0];
   }
   else {
@@ -169,9 +193,7 @@ function setShowTabsFlag(value) {
         </button>
         <p v-if="failedZoneFetch">Nie znaleziono strefy. Wybierz strefę manualnie.</p>
       </div>
-      <div v-if="showTabsFlag===2">
-        MAPA
-      </div>
+      <div v-if="showTabsFlag===2" id="map"></div>
       <p style="border-bottom: 1px solid #D6D6D6; margin-bottom: 10px; margin-top: 10px"></p>
       <div>
         <label style="display:block">Nośnik</label>
@@ -206,11 +228,14 @@ function setShowTabsFlag(value) {
         <label style="display:block">Szerokość</label>
         <input type="number" v-model="width" min="0"><br>
         <br>
-        <button style="display: flex; align-items: center" @click="isValidAd(zone, carrier, location, type, height, width)">
+        <button style="display: flex; align-items: center"
+                @click="result = isValidAd(zone, carrier, location, type, height, width)">
           <span>Sprawdź</span>
           <img src="/survey.png" style="margin-left:10px;" alt="survey icon"/>
         </button>
-        <p>{{result}}</p>
+        <ul>
+          <li v-for="condition in conditions">{{condition}}</li>
+        </ul>
       </div>
       <p style="border-bottom: 1px solid #D6D6D6; margin-bottom: 10px; margin-top: 10px"></p>
       <a href="https://nowy.plock.eu/slowniczek/">Nie rozumiesz czegoś? Sprawdź słowniczek!</a>
@@ -219,6 +244,8 @@ function setShowTabsFlag(value) {
 </template>
 
 <style scoped>
+  #map { height: 360px; }
+
   * {
     font-family: 'Source Sans Pro',sans-serif;
     font-size: 16px;
