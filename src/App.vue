@@ -23,7 +23,7 @@ const carriers = [
 ];
 const locations = ['na budynkach', 'na obiektach', 'wolnostojące'];
 // const types comes from './criteria'
-
+let isSuccessPhoto = ref(null);
 
 const street = ref('');
 const buildingNumber = ref('');
@@ -129,6 +129,45 @@ function countFee(days) {
   return ((height.value * width.value * 40 * 0.28 * days) + (40 * 3.14 * days)).toFixed(2);
 }
 
+const loadImageBase64 = (file) => {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = (error) => reject(error);
+  });
+}
+
+const handleFileChange = async (event) => {
+  const image = await loadImageBase64(event.target.files[0]);
+  axios({
+    method: "POST",
+    url: "https://detect.roboflow.com/led-nsbtv/2",
+    params: {
+      api_key: "xyNhcFfPdD59TgzeZ7hT"
+    },
+    data: image,
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded"
+    }
+  })
+      .then(function(response) {
+        //tu sprawdzic czy sa jakies wyniki i jak sa to odfiltrowac 80% pewnosci
+        //i wrzucic to w stringa ze jest oki :D
+        const result = response.data.predictions.filter(pred => pred.confidence > 0.8);
+        if(result.length > 0) {
+          isSuccessPhoto.value = true;
+        }
+        else {
+          isSuccessPhoto.value = false;
+        }
+      })
+      .catch(function(error) {
+        isSuccessPhoto = false;
+        console.log(error.message);
+      });
+};
+
 onMounted(() => {
   const modal = document.getElementById("myModal");
   const btn = document.getElementById("myBtn");
@@ -185,8 +224,8 @@ onUnmounted(() => {
       <div>
         <div style="display:flex; width: 100%; align-items: center">
           <label style="display: block">Strefa</label>
-          <button style="line-height: 10px; font-size: 10px; margin-left:25px;" @click="setShowTabsFlag(1)">Znajdź po adresie</button>&nbsp;
-          <button style="line-height: 10px; font-size: 10px;" @click="setShowTabsFlag(2)">Znajdź na mapie</button>
+          <button style="line-height: 12px; font-size: 12px; margin-left:25px;" @click="setShowTabsFlag(1)">Znajdź po adresie</button>&nbsp;
+          <button style="line-height: 12px; font-size: 12px;" @click="setShowTabsFlag(2)">Znajdź na mapie</button>
         </div>
         <select style="margin-bottom: 5px" name="zone" v-model="zone">
           <option v-for="zone in zones" :value="zone">Obszar {{zone}}</option>
@@ -270,6 +309,30 @@ onUnmounted(() => {
       </div>
       <p style="border-bottom: 1px solid #D6D6D6; margin-bottom: 10px; margin-top: 10px"></p>
       <a href="https://nowy.plock.eu/slowniczek/" target="_blank" rel="noopener noreferrer">Nie rozumiesz czegoś? Sprawdź słowniczek!</a>
+      <p style="border-bottom: 1px solid #D6D6D6; margin-bottom: 10px; margin-top: 10px"></p>
+      <input
+          type="file"
+          id="files"
+          name="image"
+          accept="image/*"
+          @change="handleFileChange"
+      />
+      <div v-if="conditions.length > 0 && errors.length === 0" class="success">
+        Brawo! Reklama spełnia podstawowe kryteria. Teraz upewnij się, że nie łamie ona żadnego z poniższych dodatkowych przepisów:
+        <ul style="background-color: inherit">
+          <li v-for="condition in conditions" style="background-color: inherit">{{condition}}</li>
+        </ul>
+      </div>
+      <div v-if="isSuccessPhoto === true" class="success" style="padding: 10px">
+        Najprawdopodobniej na zdjęciu znajduje się co najmniej jedna reklama.
+      </div>
+      <div v-else-if="isSuccessPhoto === false" class="failure">
+        Najprawdopodobniej na zdjęciu nie znajduje się żadna reklama.
+      </div>
+      <p style="border-bottom: 1px solid #D6D6D6; margin-bottom: 10px; margin-top: 10px"></p>
+      <i>Niniejsza aplikacja stanowi jedynie pomoc w interpretacji
+      <a href="https://www.mzd-plock.eu/media/editor_upload/Wnioski/2021/Uchwa%C5%82a%20krajobrazowa%20381%20XXII%202020.pdf" target="_blank" rel="noopener noreferrer"><u>UCHWAŁY NR 381/XXII/2020 RADY MIASTA PŁOCKA.</u></a> Nie jest ona równoznaczna z decyzją administracyjną.</i>
+      W razie wszelkich nieścisłości ze stanem faktycznym ustawy prosimy o informację pod adresem email: reklama@plock.pl bądź numerem telefonu: +48 123 456 789.
     </div>
   </main>
 </template>
