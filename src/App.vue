@@ -40,6 +40,7 @@ const type = ref("");
 
 const height = ref("");
 const width = ref("");
+const days = ref(1);
 
 const result = ref(false);
 const errors = ref([]);
@@ -181,7 +182,7 @@ onUnmounted(() => {
     <div id="myModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <div v-for="x in iterator">
+        <div v-for="x in iterator" style="text-align: center; display: block">
           <img v-if="imageExists(x)" :src="concatenateImagePath(x)">
         </div>
       </div>
@@ -265,7 +266,9 @@ onUnmounted(() => {
             <li v-for="error in errors" style="background-color: inherit">{{error}}</li>
           </ul>
           <div v-if="height && width" style="background-color: inherit">
-            Dzienna kara za utrzymywanie danej reklamy wynosi: {{countFee(1)}}zł.
+            Kara za umieszczanie reklamy przez
+            <input type="number" v-model="days" min="1" style="display: inline; width: 100px">
+            dni wynosi: {{countFee(days)}}zł.
           </div>
           <div v-else style="background-color: inherit">
             Aby zobaczyć dzienną karę za wywieszenie reklamy uzupełnij informacje o wysokości i szerokości.
@@ -388,7 +391,7 @@ onUnmounted(() => {
 
   .modal-content {
     background-color: #fefefe;
-    margin: 15% auto;
+    margin: 5% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
