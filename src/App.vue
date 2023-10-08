@@ -273,7 +273,7 @@ onUnmounted(() => {
         </div>
       </div>
       <p style="border-bottom: 1px solid #D6D6D6; margin-bottom: 10px; margin-top: 10px"></p>
-      <a href="https://nowy.plock.eu/slowniczek/">Nie rozumiesz czegoś? Sprawdź słowniczek!</a>
+      <a href="https://nowy.plock.eu/slowniczek/" target="_blank" rel="noopener noreferrer">Nie rozumiesz czegoś? Sprawdź słowniczek!</a>
     </div>
   </main>
 </template>
