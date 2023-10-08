@@ -9,7 +9,7 @@ const privateKeyFile = fs.readFileSync('./keys/pkcs8.priv')
 const privateKeyObject = crypto.createPrivateKey({
     key: privateKeyFile,
     format: 'pem',
-    passphrase: 'plock' // TODO: move to env var
+    passphrase: 'plock'
 });
 
 const privateKey = privateKeyObject.export({
@@ -29,9 +29,7 @@ const connection = snowflake.createConnection({
     schema: 'KRAJOBRAZ'
 });
 
-let addresses = [];
-
-connection.connect(function (err, conn) {
+ connection.connect(function (err, conn) {
     if(err) {
         console.log('Error connecting to Snowflake')
         console.log(err)
@@ -39,21 +37,6 @@ connection.connect(function (err, conn) {
     }
     else {
         console.log('Successfully connected to Snowflake.');
-
-        connection.execute({
-            sqlText: 'SELECT * FROM KRAJOBRAZ_PLOCK.KRAJOBRAZ.ADRESY_STREFA_UK;',
-            complete: function (err, stmt, rows) {
-                if(err) {
-                    console.log('Error retrieving adresses from Snowflake!');
-                    console.log(err);
-                    process.exit(-1);
-                }
-                else {
-                    addresses = rows;
-                    console.log('Succesfully retrieved ' + rows.length + ' addresses.');
-                }
-            }
-        });
     }
 });
 
@@ -70,12 +53,37 @@ app.get('/addresses', (req, res) => {
     const nb = req.query.nb;
 
     if(!street || !nb) {
-        res.json(addresses);
+        connection.execute({
+            sqlText: `SELECT * FROM KRAJOBRAZ_PLOCK.KRAJOBRAZ.ADRESY_STREFA_UK;`,
+            complete: function (err, stmt, rows) {
+                if(err) {
+                    console.log('Error retrieving adresses from Snowflake!');
+                    console.log(err);
+                    res.json([]);
+                }
+                else {
+                    console.log('Succesfully retrieved ' + rows.length + ' addresses.');
+                    res.json(rows);
+                }
+            }
+        });
     }
     else {
-        res.json(addresses.filter(elem => {
-            return (elem.ULIC_NAZWA === street) && (elem.NUMER == nb)
-        }))
+        connection.execute({
+            sqlText: 'SELECT * FROM KRAJOBRAZ_PLOCK.KRAJOBRAZ.ADRESY_STREFA_UK WHERE ULIC_NAZWA=? AND NUMER=?;',
+            binds: [street, nb],
+            complete: function (err, stmt, rows) {
+                if(err) {
+                    console.log('Error retrieving adresses from Snowflake!');
+                    console.log(err);
+                    res.json([]);
+                }
+                else {
+                    console.log('Succesfully retrieved ' + rows.length + ' addresses.');
+                    res.json(rows);
+                }
+            }
+        });
     }
 })
 

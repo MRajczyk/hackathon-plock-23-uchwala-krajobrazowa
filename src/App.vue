@@ -7,8 +7,6 @@ import zonesPolygons from './zones';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
-let addressToZoneMap = [];
-
 function hideModal(event) {
   const modal = document.getElementById("myModal");
   if (event.target === modal) {
@@ -92,18 +90,24 @@ function isValidAd(zone, carrier, placement, type, height, width) {
 }
 
 function fetchZone() {
-  const result = addressToZoneMap.filter(element => {
-    return (element.ULIC_NAZWA === street.value) && (element.NUMER == buildingNumber.value);
-  });
+  axios.get('http://localhost:3000/addresses', {params: {
+      street: street.value, nb: buildingNumber.value,
+    }})
+      .then(function (response) {
+        const zones = response.data;
+        failedZoneFetch.value = zones.length !== 1;
 
-  failedZoneFetch.value = result.length !== 1;
-
-  if (failedZoneFetch.value) {
-    zone.value = zones[0];
-  }
-  else {
-    zone.value = result[0].UK_ID;
-  }
+        if (failedZoneFetch.value) {
+          zone.value = zones[0];
+        }
+        else {
+          zone.value = zones[0].UK_ID;
+        }
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
 }
 
 function setShowTabsFlag(value) {
@@ -140,18 +144,6 @@ onMounted(() => {
   }
 
   window.addEventListener('click', hideModal);
-
-  axios.get('http://localhost:3000/addresses')
-      .then(function (response) {
-        addressToZoneMap = response.data;
-      })
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-      })
-      .finally(function () {
-        // always executed
-      });
 
   const map = L.map('map').setView([51.505, -0.09], 13);
 
