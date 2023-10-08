@@ -1,13 +1,13 @@
 <script setup>
 import {ref, onMounted, onUnmounted} from "vue";
 import axios from "axios";
-import criteria from "./kryteria";
+import {criteria, types} from "./criteria";
 import zonesPolygons from './zones';
 
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
-let adresyStrefa = [];
+let addressToZoneMap = [];
 
 function hideModal(event) {
   const modal = document.getElementById("myModal");
@@ -18,13 +18,13 @@ function hideModal(event) {
 
 const zones = [1, 2, 3];
 const carriers = [
-  'tablice',
+  'Tablice',
   'Szyldy',
   'Obiekty małej architektury',
   'Ogrodzenia'
 ];
 const locations = ['na budynkach', 'na obiektach', 'wolnostojące'];
-const types = ['Słup ogłoszeniowo-reklamowy', 'Gablota ekspozycyjna typu City Light Poster (CLP)', 'Stojak reklamowy - sztaluga', 'Stojak reklamowy - potykacz', 'Billboard'];
+// const types comes from './criteria'
 
 
 const street = ref('');
@@ -47,7 +47,7 @@ const errors = ref([]);
 const conditions = ref([]);
 
 const showTabsFlag = ref(0);
-const mapUnitialised = ref(true);
+const mapUninitialized = ref(true);
 
 function isValidAd(zone, carrier, placement, type, height, width) {
   errors.value = [];
@@ -92,7 +92,7 @@ function isValidAd(zone, carrier, placement, type, height, width) {
 }
 
 function fetchZone() {
-  const result = adresyStrefa.filter(element => {
+  const result = addressToZoneMap.filter(element => {
     return (element.ULIC_NAZWA === street.value) && (element.NUMER == buildingNumber.value);
   });
 
@@ -112,13 +112,13 @@ function setShowTabsFlag(value) {
 
 function imageExists(img_num) {
   const http = new XMLHttpRequest();
-  http.open('HEAD', "/tablice/Obszar " + zone.value + "/" + location.value + "/" + img_num + ".jpg", false);
+  http.open('HEAD', "/Tablice/Obszar " + zone.value + "/" + location.value + "/" + img_num + ".jpg", false);
   http.send();
   return http.status !== 404;
 }
 
 function concatenateImagePath(x) {
-   return "/tablice/Obszar " + zone.value + "/" + location.value + "/" + x + ".jpg";
+   return "/Tablice/Obszar " + zone.value + "/" + location.value + "/" + x + ".jpg";
 }
 
 function countFee(days) {
@@ -143,7 +143,7 @@ onMounted(() => {
 
   axios.get('http://localhost:3000/addresses')
       .then(function (response) {
-        adresyStrefa = response.data;
+        addressToZoneMap = response.data;
       })
       .catch(function (error) {
         // handle error
@@ -168,7 +168,7 @@ onMounted(() => {
   let greatestZone = zonesPolygons.reduce((max, elem) => (elem.id > max.id ? elem : max));
   map.fitBounds(greatestZone.polygon.getBounds());
 
-  mapUnitialised.value = false;
+  mapUninitialized.value = false;
 })
 
 onUnmounted(() => {
@@ -215,7 +215,7 @@ onUnmounted(() => {
         </button>
         <p v-if="failedZoneFetch">Nie znaleziono strefy. Wybierz strefę manualnie.</p>
       </div>
-      <div v-show="showTabsFlag === 2 || mapUnitialised" id="map"></div>
+      <div v-show="showTabsFlag === 2 || mapUninitialized" id="map"></div>
       <p style="border-bottom: 1px solid #D6D6D6; margin-bottom: 10px; margin-top: 10px"></p>
       <div>
         <label style="display:block">Nośnik</label>
@@ -224,7 +224,7 @@ onUnmounted(() => {
         </select>
       </div>
 
-      <div v-if="carrier === 'Szyldy' || carrier.startsWith('tablice')">
+      <div v-if="carrier === 'Szyldy' || carrier.startsWith('Tablice')">
         <label style="display:block">Lokalizacja</label>
         <select name="location" v-model="location">
           <option v-for="l in locations">{{l}}</option>

@@ -1,7 +1,7 @@
-const criteria = [
+export const criteria = [
     {
         "zone": 3,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Słup ogłoszeniowo-reklamowy",
         "height": 4,
@@ -12,7 +12,7 @@ const criteria = [
     },
     {
         "zone": 3,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Gablota ekspozycyjna typu City Light Poster (CLP)",
         "height": 1.2,
@@ -23,7 +23,7 @@ const criteria = [
     },
     {
         "zone": 3,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Stojak reklamowy - sztaluga",
         "height": 1.6,
@@ -34,7 +34,7 @@ const criteria = [
     },
     {
         "zone": 3,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Stojak reklamowy - potykacz",
         "height": 1.2,
@@ -45,7 +45,7 @@ const criteria = [
     },
     {
         "zone": 3,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Gablota ekspozycyjna z menu prezentująca ofertę lokalu gastronomicznego",
         "height": null,
@@ -56,7 +56,7 @@ const criteria = [
     },
     {
         "zone": 3,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Tablica reklamowa na elementach wyposażenia sezonowych ogródków gastronomicznych",
         "height": 0.2,
@@ -67,7 +67,7 @@ const criteria = [
     },
     {
         "zone": 3,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Reklama okolicznościowa",
         "height": null,
@@ -78,7 +78,7 @@ const criteria = [
     },
     {
         "zone": 3,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Gablota ekspozycyjna",
         "height": null,
@@ -89,7 +89,7 @@ const criteria = [
     },
     {
         "zone": 3,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Flaga reklamowa zlokalizowana na maszcie",
         "height": 12,
@@ -100,7 +100,7 @@ const criteria = [
     },
     {
         "zone": 3,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Pylon reklamowy",
         "height": 8,
@@ -111,7 +111,7 @@ const criteria = [
     },
     {
         "zone": 3,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Billboard",
         "height": 9,
@@ -122,7 +122,7 @@ const criteria = [
     },
     {
         "zone": 3,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Tablica kierunkowa",
         "height": null,
@@ -133,7 +133,7 @@ const criteria = [
     },
     {
         "zone": 3,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Totem reklamowy",
         "height": 25,
@@ -144,7 +144,7 @@ const criteria = [
     },
     {
         "zone": 2,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Słup ogłoszeniowo-reklamowy",
         "height": 4,
@@ -155,7 +155,7 @@ const criteria = [
     },
     {
         "zone": 2,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Gablota ekspozycyjna typu City Light Poster (CLP)",
         "height": 1.2,
@@ -166,7 +166,7 @@ const criteria = [
     },
     {
         "zone": 2,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Znaki przestrzenne będące nazwą własną, logo lub logotypem podmiotu, inwestora zagospodarowania przestrzeni publicznej lub przestrzeni rekreacyjnej",
         "height": 3,
@@ -177,7 +177,7 @@ const criteria = [
     },
     {
         "zone": 2,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Stojak reklamowy - sztaluga",
         "height": 1.6,
@@ -188,7 +188,7 @@ const criteria = [
     },
     {
         "zone": 2,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Stojak reklamowy - potykacz",
         "height": 1.2,
@@ -199,7 +199,7 @@ const criteria = [
     },
     {
         "zone": 2,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Gablota ekspozycyjna z menu prezentująca ofertę lokalu gastronomicznego",
         "height": null,
@@ -210,7 +210,7 @@ const criteria = [
     },
     {
         "zone": 2,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Tablica reklamowa na elementach wyposażenia sezonowych ogródków gastronomicznych",
         "height": 0.2,
@@ -221,7 +221,7 @@ const criteria = [
     },
     {
         "zone": 2,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Reklama okolicznościowa",
         "height": null,
@@ -232,7 +232,7 @@ const criteria = [
     },
     {
         "zone": 2,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Gablota ekspozycyjna",
         "height": null,
@@ -243,7 +243,7 @@ const criteria = [
     },
     {
         "zone": 2,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Flaga reklamowa zlokalizowana na maszcie",
         "height": 8,
@@ -254,7 +254,7 @@ const criteria = [
     },
     {
         "zone": 2,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Pylon reklamowy",
         "height": 8,
@@ -265,7 +265,7 @@ const criteria = [
     },
     {
         "zone": 2,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Billboard",
         "height": 6,
@@ -276,7 +276,7 @@ const criteria = [
     },
     {
         "zone": 2,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Tablica kierunkowa",
         "height": null,
@@ -287,7 +287,7 @@ const criteria = [
     },
     {
         "zone": 2,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Totem reklamowy",
         "height": 25,
@@ -298,7 +298,7 @@ const criteria = [
     },
     {
         "zone": 1,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Słup ogłoszeniowo-reklamowy",
         "height": 4,
@@ -309,7 +309,7 @@ const criteria = [
     },
     {
         "zone": 1,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Gablota ekspozycyjna typu City Light Poster (CLP)",
         "height": 1.2,
@@ -320,7 +320,7 @@ const criteria = [
     },
     {
         "zone": 1,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Znaki przestrzenne będące nazwą własną, logo lub logotypem podmiotu, inwestora zagospodarowania przestrzeni publicznej lub przestrzeni rekreacyjnej",
         "height": 3,
@@ -331,7 +331,7 @@ const criteria = [
     },
     {
         "zone": 1,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Stojak reklamowy - sztaluga",
         "height": 1.6,
@@ -342,7 +342,7 @@ const criteria = [
     },
     {
         "zone": 1,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Stojak reklamowy - potykacz",
         "height": 1.2,
@@ -353,7 +353,7 @@ const criteria = [
     },
     {
         "zone": 1,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Gablota ekspozycyjna z menu prezentująca ofertę lokalu gastronomicznego",
         "height": null,
@@ -364,7 +364,7 @@ const criteria = [
     },
     {
         "zone": 1,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Tablica reklamowa na elementach wyposażenia sezonowych ogródków gastronomicznych",
         "height": 0.2,
@@ -375,7 +375,7 @@ const criteria = [
     },
     {
         "zone": 1,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "wolnostojące",
         "type": "Reklama okolicznościowa",
         "height": null,
@@ -386,7 +386,7 @@ const criteria = [
     },
     {
         "zone": 1,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na obiektach",
         "type": "Tablica reklamowa na elewacji kiosku ulicznego",
         "height": null,
@@ -397,7 +397,7 @@ const criteria = [
     },
     {
         "zone": 1,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na obiektach",
         "type": "Tablica reklamowa na lambrekinach markiz",
         "height": 0.2,
@@ -408,7 +408,7 @@ const criteria = [
     },
     {
         "zone": 2,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na obiektach",
         "type": "Tablica reklamowa na elewacji kiosku ulicznego",
         "height": null,
@@ -419,7 +419,7 @@ const criteria = [
     },
     {
         "zone": 2,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na obiektach",
         "type": "Tablica reklamowa na lambrekinach markiz",
         "height": 0.2,
@@ -430,7 +430,7 @@ const criteria = [
     },
     {
         "zone": 3,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na obiektach",
         "type": "Tablica reklamowa na elewacji kiosku ulicznego",
         "height": null,
@@ -441,7 +441,7 @@ const criteria = [
     },
     {
         "zone": 3,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na obiektach",
         "type": "Tablica reklamowa na lambrekinach markiz",
         "height": 0.2,
@@ -452,7 +452,7 @@ const criteria = [
     },
     {
         "zone": 1,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Tablica lub urządzenie reklamowe sytuowane w świetle witryny od strony zewnętrznej (budynki niezabytkowe)",
         "height": null,
@@ -463,7 +463,7 @@ const criteria = [
     },
     {
         "zone": 1,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Tablica lub urządzenie reklamowe sytuowane w świetle witryny od strony zewnętrznej (budynki zabytkowe)",
         "height": null,
@@ -474,7 +474,7 @@ const criteria = [
     },
     {
         "zone": 1,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Tablica reklamowa sytuowana w świetle witryny od strony wewnętrznej",
         "height": null,
@@ -485,7 +485,7 @@ const criteria = [
     },
     {
         "zone": 1,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Wyklejenie na elementach przeszklonych elewacji",
         "height": null,
@@ -496,7 +496,7 @@ const criteria = [
     },
     {
         "zone": 1,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Gablota ekspozycyjna elewacyjna prezentująca ofertę gastronomiczną (obiekty niezabytkowe)",
         "height": null,
@@ -507,7 +507,7 @@ const criteria = [
     },
     {
         "zone": 1,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Gablota ekspozycyjna elewacyjna prezentująca ofertę gastronomiczną (obiekty zabytkowe)",
         "height": null,
@@ -518,7 +518,7 @@ const criteria = [
     },
     {
         "zone": 1,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Gablota ekspozycyjna elewacyjna na budynkach użyteczności publicznej",
         "height": 1.2,
@@ -529,7 +529,7 @@ const criteria = [
     },
     {
         "zone": 1,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Reklamowa siatka ochronna (budynki niezabytkowe)",
         "height": null,
@@ -540,7 +540,7 @@ const criteria = [
     },
     {
         "zone": 1,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Reklamowa siatka ochronna (budynki zabytkowe)",
         "height": null,
@@ -551,7 +551,7 @@ const criteria = [
     },
     {
         "zone": 1,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Flaga reklamowa zlokalizowana na elewacji",
         "height": null,
@@ -562,7 +562,7 @@ const criteria = [
     },
     {
         "zone": 2,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Tablica lub urządzenie reklamowe sytuowane w świetle witryny od strony zewnętrznej",
         "height": null,
@@ -573,7 +573,7 @@ const criteria = [
     },
     {
         "zone": 2,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Tablica reklamowa sytuowana w świetle witryny od strony wewnętrznej",
         "height": null,
@@ -584,7 +584,7 @@ const criteria = [
     },
     {
         "zone": 2,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Wyklejenie na elementach przeszklonych elewacji",
         "height": null,
@@ -595,7 +595,7 @@ const criteria = [
     },
     {
         "zone": 2,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Gablota ekspozycyjna elewacyjna prezentująca ofertę gastronomiczną (obiekty niezabytkowe)",
         "height": null,
@@ -606,7 +606,7 @@ const criteria = [
     },
     {
         "zone": 2,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Gablota ekspozycyjna elewacyjna prezentująca ofertę gastronomiczną (obiekty zabytkowe)",
         "height": null,
@@ -617,7 +617,7 @@ const criteria = [
     },
     {
         "zone": 2,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Gablota ekspozycyjna elewacyjna na budynkach użyteczności publicznej",
         "height": 1.2,
@@ -628,7 +628,7 @@ const criteria = [
     },
     {
         "zone": 2,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Reklamowa siatka ochronna",
         "height": null,
@@ -639,7 +639,7 @@ const criteria = [
     },
     {
         "zone": 2,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Flaga reklamowa zlokalizowana na elewacji",
         "height": null,
@@ -650,7 +650,7 @@ const criteria = [
     },
     {
         "zone": 2,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Urządzenie reklamowe główne, równolegle do lica elewacji",
         "height": null,
@@ -661,7 +661,7 @@ const criteria = [
     },
     {
         "zone": 2,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Billboard zlokalizowany na elewacji",
         "height": null,
@@ -672,7 +672,7 @@ const criteria = [
     },
     {
         "zone": 2,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Urządzenie reklamowe główne, prostopadłe do lica elewacji",
         "height": null,
@@ -683,7 +683,7 @@ const criteria = [
     },
     {
         "zone": 2,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Grupa tablic reklamowych i urządzeń reklamowych równoległych do lica elewacji",
         "height": null,
@@ -694,7 +694,7 @@ const criteria = [
     },
     {
         "zone": 3,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Tablica lub urządzenie reklamowe sytuowane w świetle witryny od strony zewnętrznej",
         "height": null,
@@ -705,7 +705,7 @@ const criteria = [
     },
     {
         "zone": 3,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Tablica reklamowa sytuowana w świetle witryny od strony wewnętrznej",
         "height": null,
@@ -716,7 +716,7 @@ const criteria = [
     },
     {
         "zone": 3,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Wyklejenie na elementach przeszklonych elewacji",
         "height": null,
@@ -727,7 +727,7 @@ const criteria = [
     },
     {
         "zone": 3,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Gablota ekspozycyjna elewacyjna prezentująca ofertę gastronomiczną",
         "height": null,
@@ -738,7 +738,7 @@ const criteria = [
     },
     {
         "zone": 3,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Gablota ekspozycyjna elewacyjna na budynkach użyteczności publicznej",
         "height": 1.2,
@@ -749,7 +749,7 @@ const criteria = [
     },
     {
         "zone": 3,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Reklamowa siatka ochronna",
         "height": null,
@@ -760,7 +760,7 @@ const criteria = [
     },
     {
         "zone": 3,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Flaga reklamowa zlokalizowana na elewacji",
         "height": null,
@@ -771,7 +771,7 @@ const criteria = [
     },
     {
         "zone": 3,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Urządzenie reklamowe główne, równolegle do lica elewacji",
         "height": null,
@@ -782,7 +782,7 @@ const criteria = [
     },
     {
         "zone": 3,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Billboard zlokalizowany na elewacji",
         "height": null,
@@ -793,7 +793,7 @@ const criteria = [
     },
     {
         "zone": 3,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Urządzenie reklamowe główne, prostopadłe do lica elewacji",
         "height": null,
@@ -804,7 +804,7 @@ const criteria = [
     },
     {
         "zone": 3,
-        "carrier": "tablice",
+        "carrier": "Tablice",
         "placement": "na budynkach",
         "type": "Grupa tablic reklamowych i urządzeń reklamowych równoległych do lica elewacji",
         "height": null,
@@ -815,4 +815,5 @@ const criteria = [
     }
 ]
 
-export default criteria;
+export const types = new Set();
+criteria.forEach(elem => types.add(elem.type));
