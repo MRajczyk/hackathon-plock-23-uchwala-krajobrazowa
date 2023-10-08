@@ -234,7 +234,7 @@ onUnmounted(() => {
       <div>
         <div style="display:block">
           <label>Typ</label>&nbsp;
-          <button id="myBtn">?</button>
+          <button id="myBtn" v-show="zone && carrier && location">?</button>
         </div>
         <select name="types" v-model="type">
           <option v-for="l in types">{{l}}</option>
