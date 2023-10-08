@@ -223,9 +223,9 @@ onUnmounted(() => {
       <h1>SPRAWDŹ LEGALNOŚĆ REKLAMY</h1>
       <div>
         <div style="display:flex; width: 100%; align-items: center">
-          <label style="display: block">Strefa</label>
-          <button style="line-height: 12px; font-size: 12px; margin-left:25px;" @click="setShowTabsFlag(1)">Znajdź po adresie</button>&nbsp;
-          <button style="line-height: 12px; font-size: 12px;" @click="setShowTabsFlag(2)">Znajdź na mapie</button>
+          <label style="display: block; padding-top:10px;">Strefa</label>
+          <button style="line-height: 12px; font-size: 12px; margin-left:25px; font-weight: 500" @click="setShowTabsFlag(1)">Znajdź po adresie</button>&nbsp;
+          <button style="line-height: 12px; font-size: 12px; font-weight: 500;" @click="setShowTabsFlag(2)">Znajdź na mapie</button>
         </div>
         <select style="margin-bottom: 5px" name="zone" v-model="zone">
           <option v-for="zone in zones" :value="zone">Obszar {{zone}}</option>
@@ -313,16 +313,12 @@ onUnmounted(() => {
       <input
           type="file"
           id="files"
+          class="photo-input"
           name="image"
+          style="height: 40px;"
           accept="image/*"
           @change="handleFileChange"
       />
-      <div v-if="conditions.length > 0 && errors.length === 0" class="success">
-        Brawo! Reklama spełnia podstawowe kryteria. Teraz upewnij się, że nie łamie ona żadnego z poniższych dodatkowych przepisów:
-        <ul style="background-color: inherit">
-          <li v-for="condition in conditions" style="background-color: inherit">{{condition}}</li>
-        </ul>
-      </div>
       <div v-if="isSuccessPhoto === true" class="success" style="padding: 10px">
         Najprawdopodobniej na zdjęciu znajduje się co najmniej jedna reklama.
       </div>
@@ -468,7 +464,7 @@ onUnmounted(() => {
 .success {
   margin-top: 20px;
   background-color: #D4EDDA;
-  border: 1px solid green;
+  border: 2px solid green;
   padding: 10px 10px 0 10px;
 }
 
@@ -478,4 +474,37 @@ onUnmounted(() => {
   border: 1px solid red;
   padding: 10px;
 }
+
+  .photo-input {
+    line-height: 24px;
+    padding: 5px 10px;
+    position: relative;
+    color: #666;
+    font-weight: 300;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    text-transform: uppercase;
+  }
+
+  .photo-input:hover {
+    cursor: pointer;
+  }
+
+  .photo-input::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+  }
+
+  .photo-input:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    outline: none;
+  }
 </style>
