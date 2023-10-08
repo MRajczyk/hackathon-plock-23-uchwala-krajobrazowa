@@ -8,7 +8,7 @@ const criteria = [
         "width": 1.50,
         "minArea": null,
         "maxArea": null,
-        "conditions": "nieprzenośny, fundament poniżej poziomu terenu;maksymalna całkowita wysokość słupa - 4,0 m;maksymalna szerokość boku prostopadłościanu lub średnica walca - 1,5 m mierzona na wysokości części ekspozycyjnej;Montaż przy zachowaniu co najmniej 50,0 m odległości pomiędzy słupami;"
+        "conditions": "nieprzenośny, fundament poniżej poziomu terenu;maksymalna całkowita wysokość słupa - 4,0 m;maksymalna szerokość boku prostopadłościanu lub średnica walca - 1,5 m mierzona na wysokości części ekspozycyjnej;Montaż przy zachowaniu co najmniej 50,0 m odległości pomiędzy słupami"
     },
     {
         "zone": 3,
@@ -19,7 +19,7 @@ const criteria = [
         "width": 1.80,
         "minArea": null,
         "maxArea": null,
-        "conditions": "nieprzenośna, fundament poniżej poziomu terenu;pole powierzchni służącej ekspozycji reklamy w formacie „euro size”;montaż przy zachowaniu co najmniej 30,0 m odległości pomiędzy gablotami; dopuszcza się zmniejszenie odległości, w sytuacji gdy kilka gablot stanowi spójnie zaprojektowaną grupę, przewidzianą w obrębie danej przestrzeni miejskiej;dopuszcza się gabloty ekspozycyjne typu CLP zintegrowane z wiatą przystankową, z wykluczeniem gablot przesłaniających wiaty od strony najazdowej;dopuszcza się gabloty ekspozycyjne typu CLP w formie ekranów świetlnych reklamowych;"
+        "conditions": "nieprzenośna, fundament poniżej poziomu terenu;pole powierzchni służącej ekspozycji reklamy w formacie „euro size”;montaż przy zachowaniu co najmniej 30,0 m odległości pomiędzy gablotami; dopuszcza się zmniejszenie odległości, w sytuacji gdy kilka gablot stanowi spójnie zaprojektowaną grupę, przewidzianą w obrębie danej przestrzeni miejskiej;dopuszcza się gabloty ekspozycyjne typu CLP zintegrowane z wiatą przystankową, z wykluczeniem gablot przesłaniających wiaty od strony najazdowej;dopuszcza się gabloty ekspozycyjne typu CLP w formie ekranów świetlnych reklamowych"
     },
     {
         "zone": 3,
@@ -30,7 +30,7 @@ const criteria = [
         "width": null,
         "minArea": null,
         "maxArea": null,
-        "conditions": "przenośny;w formie pojedynczej tablicy pełnej, ustawionej na sztaludze, o całkowitej wysokości do 1,6 m lub w formie potykacza o całkowitej wysokości do 1,2 m;konstrukcja stojaka wykonana z drewna lub metalu;"
+        "conditions": "przenośny;w formie pojedynczej tablicy pełnej, ustawionej na sztaludze, o całkowitej wysokości do 1,6 m lub w formie potykacza o całkowitej wysokości do 1,2 m;konstrukcja stojaka wykonana z drewna lub metalu"
     },
     {
         "zone": 3,
@@ -41,7 +41,7 @@ const criteria = [
         "width": null,
         "minArea": null,
         "maxArea": null,
-        "conditions": "przenośny;w formie pojedynczej tablicy pełnej, ustawionej na sztaludze, o całkowitej wysokości do 1,6 m lub w formie potykacza o całkowitej wysokości do 1,2 m;konstrukcja stojaka wykonana z drewna lub metalu;"
+        "conditions": "przenośny;w formie pojedynczej tablicy pełnej, ustawionej na sztaludze, o całkowitej wysokości do 1,6 m lub w formie potykacza o całkowitej wysokości do 1,2 m;konstrukcja stojaka wykonana z drewna lub metalu"
     },
     {
         "zone": 3,
@@ -52,7 +52,7 @@ const criteria = [
         "width": null,
         "minArea": 0.25,
         "maxArea": 0.5,
-        "conditions": "przenośna;maksymalne pole powierzchni służącej ekspozycji reklamy nie większe od formatu drobnego;konstrukcja gabloty wykonana z drewna lub metalu;"
+        "conditions": "przenośna;maksymalne pole powierzchni służącej ekspozycji reklamy nie większe od formatu drobnego;konstrukcja gabloty wykonana z drewna lub metalu"
     },
     {
         "zone": 3,
@@ -63,7 +63,7 @@ const criteria = [
         "width": null,
         "minArea": null,
         "maxArea": null,
-        "conditions": "przenośna;Montaż na lambrekinie zadaszenia ogródka, lambrekinie parasola, rollbarze, przęśle ogrodzenia, donicy wolnostojącej, krześle, stole czy leżaku oraz na lambrekinie markizy lub zadaszenia kramu ulicznego;w formie monochromatycznych znaków bez tła;maksymalna wysokość znaków - 0,20 m;"
+        "conditions": "przenośna;Montaż na lambrekinie zadaszenia ogródka, lambrekinie parasola, rollbarze, przęśle ogrodzenia, donicy wolnostojącej, krześle, stole czy leżaku oraz na lambrekinie markizy lub zadaszenia kramu ulicznego;w formie monochromatycznych znaków bez tła;maksymalna wysokość znaków - 0,20 m"
     },
     {
         "zone": 3,
@@ -74,7 +74,7 @@ const criteria = [
         "width": null,
         "minArea": null,
         "maxArea": null,
-        "conditions": "przenośna;w formie ekspozytora, stojaka reklamowego, windera, plakatu, carriera pneumatycznego o powierzchni służącej ekspozycji reklamy maksymalnie formatu średniego, banera reklamowego o powierzchni służącej ekspozycji reklamy maksymalnie formatu średniego, ekranu projekcyjnego reklamowego i ekranu świetlnego reklamowego;;Ustawiona wyłącznie na terenie organizacji wydarzenia;Eksponowana podczas trwania wydarzenia lecz nie dłużej niż przez 21;"
+        "conditions": "przenośna;w formie ekspozytora, stojaka reklamowego, windera, plakatu, carriera pneumatycznego o powierzchni służącej ekspozycji reklamy maksymalnie formatu średniego, banera reklamowego o powierzchni służącej ekspozycji reklamy maksymalnie formatu średniego, ekranu projekcyjnego reklamowego i ekranu świetlnego reklamowego;;Ustawiona wyłącznie na terenie organizacji wydarzenia;Eksponowana podczas trwania wydarzenia lecz nie dłużej niż przez 21"
     },
     {
         "zone": 3,
@@ -85,7 +85,7 @@ const criteria = [
         "width": null,
         "minArea": 0.50,
         "maxArea": 3,
-        "conditions": "nieprzenośna, fundament poniżej poziomu terenu;maksymalne pole powierzchni służącej ekspozycji reklamy formatu małego;należy zachować co najmniej 30,0 m odległości pomiędzy gablotami; dopuszcza się zmniejszenie odległości, w sytuacji gdy kilka gablot stanowi spójnie zaprojektowaną grupę, przewidzianą w obrębie danej przestrzeni miejskiej;"
+        "conditions": "nieprzenośna, fundament poniżej poziomu terenu;maksymalne pole powierzchni służącej ekspozycji reklamy formatu małego;należy zachować co najmniej 30,0 m odległości pomiędzy gablotami; dopuszcza się zmniejszenie odległości, w sytuacji gdy kilka gablot stanowi spójnie zaprojektowaną grupę, przewidzianą w obrębie danej przestrzeni miejskiej"
     },
     {
         "zone": 3,
@@ -96,7 +96,7 @@ const criteria = [
         "width": null,
         "minArea": null,
         "maxArea": null,
-        "conditions": "nieprzenośna, fundament poniżej poziomu terenu;maksymalne wymiary flagi równe 6,0 m x 2,0 m;maksymalna wysokość masztu równą 12,0 m, lecz nie większa niż najwyższy budynek znajdujący się na danej nieruchomości;montaż na maszcie w układzie pionowym;Montaż w minimalnej odległość od granicy frontu terenu równej 5,0 m;"
+        "conditions": "nieprzenośna, fundament poniżej poziomu terenu;maksymalne wymiary flagi równe 6,0 m x 2,0 m;maksymalna wysokość masztu równą 12,0 m, lecz nie większa niż najwyższy budynek znajdujący się na danej nieruchomości;montaż na maszcie w układzie pionowym;Montaż w minimalnej odległość od granicy frontu terenu równej 5,0 m"
     },
     {
         "zone": 3,
@@ -107,7 +107,7 @@ const criteria = [
         "width": 2.00,
         "minArea": null,
         "maxArea": null,
-        "conditions": "nieprzenośny, fundament poniżej poziomu terenu;maksymalna całkowita wysokość pylonu – 8,0 m;maksymalna szerokość pylonu - 2,0 m;możliwość lokalizacji na pylonie tablic reklamowych lub urządzeń reklamowych w formie tablic pełnych, znaków bez tła, znaków przestrzennych lub kasetonów stanowiących całościową kompozycję pod względem formy, wymiarów, kolorystyki tła i materiału wykonania;Montaż bezpośrednio w pobliżu wjazdu na teren lub przy wejściu do budynku;Montaż w minimalnej odległości od granicy działki równej 3,0 m;montaż przy zachowaniu co najmniej 50,0 m odległości pomiędzy pylonami;"
+        "conditions": "nieprzenośny, fundament poniżej poziomu terenu;maksymalna całkowita wysokość pylonu – 8,0 m;maksymalna szerokość pylonu - 2,0 m;możliwość lokalizacji na pylonie tablic reklamowych lub urządzeń reklamowych w formie tablic pełnych, znaków bez tła, znaków przestrzennych lub kasetonów stanowiących całościową kompozycję pod względem formy, wymiarów, kolorystyki tła i materiału wykonania;Montaż bezpośrednio w pobliżu wjazdu na teren lub przy wejściu do budynku;Montaż w minimalnej odległości od granicy działki równej 3,0 m;montaż przy zachowaniu co najmniej 50,0 m odległości pomiędzy pylonami"
     },
     {
         "zone": 3,
@@ -118,7 +118,7 @@ const criteria = [
         "width": null,
         "minArea": 12.00,
         "maxArea": 18,
-        "conditions": "nieprzenośny, fundament poniżej poziomu terenu;maksymalna całkowita wysokość pylonu – 8,0 m;maksymalna szerokość pylonu - 2,0 m;możliwość lokalizacji na pylonie tablic reklamowych lub urządzeń reklamowych w formie tablic pełnych, znaków bez tła, znaków przestrzennych lub kasetonów stanowiących całościową kompozycję pod względem formy, wymiarów, kolorystyki tła i materiału wykonania;Montaż bezpośrednio w pobliżu wjazdu na teren lub przy wejściu do budynku;Montaż w minimalnej odległości od granicy działki równej 3,0 m;montaż przy zachowaniu co najmniej 50,0 m odległości pomiędzy pylonami;nieprzenośny, fundament poniżej poziomu terenu;pole powierzchni służącej ekspozycji reklamy formatu dużego;maksymalna wysokości billboardu – 9,0 m;minimalna odległość dolnej krawędzi billboardu od poziomu terenu – 3,5 m;montaż z zachowaniem między płaszczyzną ekspozycji a frontem działki ewidencyjnej, od strony przestrzeni dostępnej publicznie dróg, ulic i placów miejskich kąta mieszczącego się w przedziale od 60 stopni do 120 stopni;montaż w przestrzeni zawierającej się w odległości od 1,0 do 15,0 m od granicy frontu działki ewidencyjnej, od strony przestrzeni dostępnej publicznie dróg, ulic i placów miejskich;montaż na działce ewidencyjnej o minimalnej szerokości frontu równej 30,0 m; przy czym billboard należy lokalizować w odległości co najmniej 15,0 m od skrajnych punktów frontu działki ewidencyjnej, od strony przestrzeni dostępnej publicznej dróg, ulic i placów miejskich – nie dotyczy działki narożnej;dopuszcza się możliwość sytuowania billboardów dwustronnych, posiadających pole powierzchni służące ekspozycji reklamy formatu dużego, z obu stron urządzenia;montaż przy zachowaniu co najmniej 15,0 m odległości pomiędzy billboardami;"
+        "conditions": "nieprzenośny, fundament poniżej poziomu terenu;maksymalna całkowita wysokość pylonu – 8,0 m;maksymalna szerokość pylonu - 2,0 m;możliwość lokalizacji na pylonie tablic reklamowych lub urządzeń reklamowych w formie tablic pełnych, znaków bez tła, znaków przestrzennych lub kasetonów stanowiących całościową kompozycję pod względem formy, wymiarów, kolorystyki tła i materiału wykonania;Montaż bezpośrednio w pobliżu wjazdu na teren lub przy wejściu do budynku;Montaż w minimalnej odległości od granicy działki równej 3,0 m;montaż przy zachowaniu co najmniej 50,0 m odległości pomiędzy pylonami;nieprzenośny, fundament poniżej poziomu terenu;pole powierzchni służącej ekspozycji reklamy formatu dużego;maksymalna wysokości billboardu – 9,0 m;minimalna odległość dolnej krawędzi billboardu od poziomu terenu – 3,5 m;montaż z zachowaniem między płaszczyzną ekspozycji a frontem działki ewidencyjnej, od strony przestrzeni dostępnej publicznie dróg, ulic i placów miejskich kąta mieszczącego się w przedziale od 60 stopni do 120 stopni;montaż w przestrzeni zawierającej się w odległości od 1,0 do 15,0 m od granicy frontu działki ewidencyjnej, od strony przestrzeni dostępnej publicznie dróg, ulic i placów miejskich;montaż na działce ewidencyjnej o minimalnej szerokości frontu równej 30,0 m; przy czym billboard należy lokalizować w odległości co najmniej 15,0 m od skrajnych punktów frontu działki ewidencyjnej, od strony przestrzeni dostępnej publicznej dróg, ulic i placów miejskich – nie dotyczy działki narożnej;dopuszcza się możliwość sytuowania billboardów dwustronnych, posiadających pole powierzchni służące ekspozycji reklamy formatu dużego, z obu stron urządzenia;montaż przy zachowaniu co najmniej 15,0 m odległości pomiędzy billboardami"
     },
     {
         "zone": 3,
@@ -129,7 +129,7 @@ const criteria = [
         "width": null,
         "minArea": null,
         "maxArea": 1,
-        "conditions": "nieprzenośna, fundament poniżej poziomu terenu;w formie tablicy płaskiej, wykonanej na podkładzie ze sztywnego i trwałego materiału;Maksymalne pole powierzchni służącej ekspozycji reklamy - 1,0 m2;w formie tablicy płaskiej, stanowiącej panel tablicy kierującej kierowców w Systemie Informacji Miejskiej;Montaż wyłącznie dla działalności gospodarczej oddalonej od głównych ciągów komunikacyjnych;"
+        "conditions": "nieprzenośna, fundament poniżej poziomu terenu;w formie tablicy płaskiej, wykonanej na podkładzie ze sztywnego i trwałego materiału;Maksymalne pole powierzchni służącej ekspozycji reklamy - 1,0 m2;w formie tablicy płaskiej, stanowiącej panel tablicy kierującej kierowców w Systemie Informacji Miejskiej;Montaż wyłącznie dla działalności gospodarczej oddalonej od głównych ciągów komunikacyjnych"
     },
     {
         "zone": 3,
@@ -140,7 +140,7 @@ const criteria = [
         "width": null,
         "minArea": 12.00,
         "maxArea": 18,
-        "conditions": "nieprzenośny;maksymalne pole powierzchni służącej ekspozycji reklamy formatu dużego;pole powierzchni służącej ekspozycji reklamy należy umieścić w górnej części konstrukcji urządzenia reklamowego;maksymalna wysokości totemu - 25,0 m;minimalną odległość dolnej krawędzi powierzchni służącej ekspozycji reklamy od poziomu terenu - 15 m;należy zachować co najmniej 5,0 m odległości od granicy działki;należy zachować co najmniej 100,0 m odległości pomiędzy totemami;"
+        "conditions": "nieprzenośny;maksymalne pole powierzchni służącej ekspozycji reklamy formatu dużego;pole powierzchni służącej ekspozycji reklamy należy umieścić w górnej części konstrukcji urządzenia reklamowego;maksymalna wysokości totemu - 25,0 m;minimalną odległość dolnej krawędzi powierzchni służącej ekspozycji reklamy od poziomu terenu - 15 m;należy zachować co najmniej 5,0 m odległości od granicy działki;należy zachować co najmniej 100,0 m odległości pomiędzy totemami"
     },
     {
         "zone": 2,
@@ -151,7 +151,7 @@ const criteria = [
         "width": 1.50,
         "minArea": null,
         "maxArea": null,
-        "conditions": "nieprzenośny, fundament poniżej poziomu terenu;maksymalna całkowita wysokość słupa - 4,0 m;maksymalna szerokość boku prostopadłościanu lub średnica walca - 1,5 m mierzona na wysokości części ekspozycyjnej;Montaż przy zachowaniu co najmniej 50,0 m odległości pomiędzy słupami;"
+        "conditions": "nieprzenośny, fundament poniżej poziomu terenu;maksymalna całkowita wysokość słupa - 4,0 m;maksymalna szerokość boku prostopadłościanu lub średnica walca - 1,5 m mierzona na wysokości części ekspozycyjnej;Montaż przy zachowaniu co najmniej 50,0 m odległości pomiędzy słupami"
     },
     {
         "zone": 2,
@@ -162,7 +162,7 @@ const criteria = [
         "width": 1.80,
         "minArea": null,
         "maxArea": null,
-        "conditions": "nieprzenośna, fundament poniżej poziomu terenu;pole powierzchni służącej ekspozycji reklamy w formacie „euro size”;montaż przy zachowaniu co najmniej 30,0 m odległości pomiędzy gablotami; dopuszcza się zmniejszenie odległości, w sytuacji gdy kilka gablot stanowi spójnie zaprojektowaną grupę, przewidzianą w obrębie danej przestrzeni miejskiej;dopuszcza się gabloty ekspozycyjne typu CLP zintegrowane z wiatą przystankową, z wykluczeniem gablot przesłaniających wiaty od strony najazdowej;dopuszcza się gabloty ekspozycyjne typu CLP w formie ekranów świetlnych reklamowych;"
+        "conditions": "nieprzenośna, fundament poniżej poziomu terenu;pole powierzchni służącej ekspozycji reklamy w formacie „euro size”;montaż przy zachowaniu co najmniej 30,0 m odległości pomiędzy gablotami; dopuszcza się zmniejszenie odległości, w sytuacji gdy kilka gablot stanowi spójnie zaprojektowaną grupę, przewidzianą w obrębie danej przestrzeni miejskiej;dopuszcza się gabloty ekspozycyjne typu CLP zintegrowane z wiatą przystankową, z wykluczeniem gablot przesłaniających wiaty od strony najazdowej;dopuszcza się gabloty ekspozycyjne typu CLP w formie ekranów świetlnych reklamowych"
     },
     {
         "zone": 2,
@@ -173,7 +173,7 @@ const criteria = [
         "width": null,
         "minArea": null,
         "maxArea": null,
-        "conditions": "nieprzenośne, fundament poniżej poziomu terenu;maksymalna wysokość znaków - 3,0 m;znaki należy lokalizować na terenie założenia, które ma charakter powierzchniowy, w sposób wynikający z aranżacji zagospodarowania otoczenia;"
+        "conditions": "nieprzenośne, fundament poniżej poziomu terenu;maksymalna wysokość znaków - 3,0 m;znaki należy lokalizować na terenie założenia, które ma charakter powierzchniowy, w sposób wynikający z aranżacji zagospodarowania otoczenia"
     },
     {
         "zone": 2,
@@ -184,7 +184,7 @@ const criteria = [
         "width": null,
         "minArea": null,
         "maxArea": null,
-        "conditions": "przenośny;w formie pojedynczej tablicy pełnej, ustawionej na sztaludze, o całkowitej wysokości do 1,6 m lub w formie potykacza o całkowitej wysokości do 1,2 m;konstrukcja stojaka wykonana z drewna lub metalu;"
+        "conditions": "przenośny;w formie pojedynczej tablicy pełnej, ustawionej na sztaludze, o całkowitej wysokości do 1,6 m lub w formie potykacza o całkowitej wysokości do 1,2 m;konstrukcja stojaka wykonana z drewna lub metalu"
     },
     {
         "zone": 2,
@@ -195,7 +195,7 @@ const criteria = [
         "width": null,
         "minArea": null,
         "maxArea": null,
-        "conditions": "przenośny;w formie pojedynczej tablicy pełnej, ustawionej na sztaludze, o całkowitej wysokości do 1,6 m lub w formie potykacza o całkowitej wysokości do 1,2 m;konstrukcja stojaka wykonana z drewna lub metalu;"
+        "conditions": "przenośny;w formie pojedynczej tablicy pełnej, ustawionej na sztaludze, o całkowitej wysokości do 1,6 m lub w formie potykacza o całkowitej wysokości do 1,2 m;konstrukcja stojaka wykonana z drewna lub metalu"
     },
     {
         "zone": 2,
@@ -206,7 +206,7 @@ const criteria = [
         "width": null,
         "minArea": 0.25,
         "maxArea": 0.5,
-        "conditions": "przenośna;maksymalne pole powierzchni służącej ekspozycji reklamy nie większe od formatu drobnego;konstrukcja gabloty wykonana z drewna lub metalu;"
+        "conditions": "przenośna;maksymalne pole powierzchni służącej ekspozycji reklamy nie większe od formatu drobnego;konstrukcja gabloty wykonana z drewna lub metalu"
     },
     {
         "zone": 2,
@@ -217,7 +217,7 @@ const criteria = [
         "width": null,
         "minArea": null,
         "maxArea": null,
-        "conditions": "przenośna;Montaż na lambrekinie zadaszenia ogródka, lambrekinie parasola, rollbarze, przęśle ogrodzenia, donicy wolnostojącej, krześle, stole czy leżaku oraz na lambrekinie markizy lub zadaszenia kramu ulicznego;w formie monochromatycznych znaków bez tła;maksymalna wysokość znaków - 0,20 m;"
+        "conditions": "przenośna;Montaż na lambrekinie zadaszenia ogródka, lambrekinie parasola, rollbarze, przęśle ogrodzenia, donicy wolnostojącej, krześle, stole czy leżaku oraz na lambrekinie markizy lub zadaszenia kramu ulicznego;w formie monochromatycznych znaków bez tła;maksymalna wysokość znaków - 0,20 m"
     },
     {
         "zone": 2,
@@ -228,7 +228,7 @@ const criteria = [
         "width": null,
         "minArea": null,
         "maxArea": null,
-        "conditions": "przenośna;w formie ekspozytora, stojaka reklamowego, windera, plakatu, carriera pneumatycznego o powierzchni służącej ekspozycji reklamy maksymalnie formatu średniego, banera reklamowego o powierzchni służącej ekspozycji reklamy maksymalnie formatu średniego, ekranu projekcyjnego reklamowego i ekranu świetlnego reklamowego;;Ustawiona wyłącznie na terenie organizacji wydarzenia;Eksponowana podczas trwania wydarzenia lecz nie dłużej niż przez 21;"
+        "conditions": "przenośna;w formie ekspozytora, stojaka reklamowego, windera, plakatu, carriera pneumatycznego o powierzchni służącej ekspozycji reklamy maksymalnie formatu średniego, banera reklamowego o powierzchni służącej ekspozycji reklamy maksymalnie formatu średniego, ekranu projekcyjnego reklamowego i ekranu świetlnego reklamowego;;Ustawiona wyłącznie na terenie organizacji wydarzenia;Eksponowana podczas trwania wydarzenia lecz nie dłużej niż przez 21"
     },
     {
         "zone": 2,
@@ -239,7 +239,7 @@ const criteria = [
         "width": null,
         "minArea": 0.50,
         "maxArea": 3,
-        "conditions": "nieprzenośna, fundament poniżej poziomu terenu;maksymalne pole powierzchni służącej ekspozycji reklamy formatu małego;należy zachować co najmniej 30,0 m odległości pomiędzy gablotami; dopuszcza się zmniejszenie odległości, w sytuacji gdy kilka gablot stanowi spójnie zaprojektowaną grupę, przewidzianą w obrębie danej przestrzeni miejskiej;"
+        "conditions": "nieprzenośna, fundament poniżej poziomu terenu;maksymalne pole powierzchni służącej ekspozycji reklamy formatu małego;należy zachować co najmniej 30,0 m odległości pomiędzy gablotami; dopuszcza się zmniejszenie odległości, w sytuacji gdy kilka gablot stanowi spójnie zaprojektowaną grupę, przewidzianą w obrębie danej przestrzeni miejskiej"
     },
     {
         "zone": 2,
@@ -250,7 +250,7 @@ const criteria = [
         "width": null,
         "minArea": null,
         "maxArea": null,
-        "conditions": "nieprzenośna, fundament poniżej poziomu terenu;maksymalne wymiary flagi równe 4,0 m x 2,0 m;maksymalna wysokość masztu równą 8,0 m, lecz nie większa niż najwyższy budynek znajdujący się na danej nieruchomości;montaż na maszcie w układzie pionowym;Montaż w minimalnej odległość od granicy frontu terenu równej 1,0 m;"
+        "conditions": "nieprzenośna, fundament poniżej poziomu terenu;maksymalne wymiary flagi równe 4,0 m x 2,0 m;maksymalna wysokość masztu równą 8,0 m, lecz nie większa niż najwyższy budynek znajdujący się na danej nieruchomości;montaż na maszcie w układzie pionowym;Montaż w minimalnej odległość od granicy frontu terenu równej 1,0 m"
     },
     {
         "zone": 2,
@@ -261,7 +261,7 @@ const criteria = [
         "width": 2.00,
         "minArea": null,
         "maxArea": null,
-        "conditions": "nieprzenośny, fundament poniżej poziomu terenu;maksymalna całkowita wysokość pylonu – 8,0 m;maksymalna szerokość pylonu - 2,0 m;możliwość lokalizacji na pylonie tablic reklamowych lub urządzeń reklamowych w formie tablic pełnych, znaków bez tła, znaków przestrzennych lub kasetonów stanowiących całościową kompozycję pod względem formy, wymiarów, kolorystyki tła i materiału wykonania;Montaż bezpośrednio w pobliżu wjazdu na teren lub przy wejściu do budynku;Montaż w minimalnej odległości od granicy działki równej 1,0 m;montaż przy zachowaniu co najmniej 50,0 m odległości pomiędzy pylonami;"
+        "conditions": "nieprzenośny, fundament poniżej poziomu terenu;maksymalna całkowita wysokość pylonu – 8,0 m;maksymalna szerokość pylonu - 2,0 m;możliwość lokalizacji na pylonie tablic reklamowych lub urządzeń reklamowych w formie tablic pełnych, znaków bez tła, znaków przestrzennych lub kasetonów stanowiących całościową kompozycję pod względem formy, wymiarów, kolorystyki tła i materiału wykonania;Montaż bezpośrednio w pobliżu wjazdu na teren lub przy wejściu do budynku;Montaż w minimalnej odległości od granicy działki równej 1,0 m;montaż przy zachowaniu co najmniej 50,0 m odległości pomiędzy pylonami"
     },
     {
         "zone": 2,
@@ -272,7 +272,7 @@ const criteria = [
         "width": null,
         "minArea": 12,
         "maxArea": 18,
-        "conditions": "nieprzenośny, fundament poniżej poziomu terenu;pole powierzchni służącej ekspozycji reklamy formatu średniego;maksymalna wysokości billboardu – 6,0 m;minimalna odległość dolnej krawędzi billboardu od poziomu terenu - 2,5 m;montaż z zachowaniem między płaszczyzną ekspozycji a frontem działki ewidencyjnej, od strony przestrzeni dostępnej publicznie dróg, ulic i placów miejskich kąta mieszczącego się w przedziale od 60 stopni do 120 stopni;montaż w przestrzeni zawierającej się w odległości od 1,0 do 15,0 m od granicy frontu działki ewidencyjnej, od strony przestrzeni dostępnej publicznie dróg, ulic i placów miejskich;montaż na działce ewidencyjnej o minimalnej szerokości frontu równej 30,0 m; przy czym billboard należy lokalizować w odległości co najmniej 15,0 m od skrajnych punktów frontu działki ewidencyjnej, od strony przestrzeni dostępnej publicznej dróg, ulic i placów miejskich – nie dotyczy działki narożnej;dopuszcza się możliwość sytuowania zamiennie maksymalnie czterech billboardów o polu powierzchni służącej ekspozycji reklamy równym 3,0 m2 i wysokości do 3,0 m;dopuszcza się możliwość sytuowania billboardów dwustronnych, posiadających pole powierzchni służące ekspozycji reklamy formatu średniego, z obu stron urządzenia;montaż przy zachowaniu co najmniej 15,0 m odległości pomiędzy billboardami;"
+        "conditions": "nieprzenośny, fundament poniżej poziomu terenu;pole powierzchni służącej ekspozycji reklamy formatu średniego;maksymalna wysokości billboardu – 6,0 m;minimalna odległość dolnej krawędzi billboardu od poziomu terenu - 2,5 m;montaż z zachowaniem między płaszczyzną ekspozycji a frontem działki ewidencyjnej, od strony przestrzeni dostępnej publicznie dróg, ulic i placów miejskich kąta mieszczącego się w przedziale od 60 stopni do 120 stopni;montaż w przestrzeni zawierającej się w odległości od 1,0 do 15,0 m od granicy frontu działki ewidencyjnej, od strony przestrzeni dostępnej publicznie dróg, ulic i placów miejskich;montaż na działce ewidencyjnej o minimalnej szerokości frontu równej 30,0 m; przy czym billboard należy lokalizować w odległości co najmniej 15,0 m od skrajnych punktów frontu działki ewidencyjnej, od strony przestrzeni dostępnej publicznej dróg, ulic i placów miejskich – nie dotyczy działki narożnej;dopuszcza się możliwość sytuowania zamiennie maksymalnie czterech billboardów o polu powierzchni służącej ekspozycji reklamy równym 3,0 m2 i wysokości do 3,0 m;dopuszcza się możliwość sytuowania billboardów dwustronnych, posiadających pole powierzchni służące ekspozycji reklamy formatu średniego, z obu stron urządzenia;montaż przy zachowaniu co najmniej 15,0 m odległości pomiędzy billboardami"
     },
     {
         "zone": 2,
@@ -283,7 +283,7 @@ const criteria = [
         "width": null,
         "minArea": null,
         "maxArea": 1,
-        "conditions": "nieprzenośna, fundament poniżej poziomu terenu;w formie tablicy płaskiej, wykonanej na podkładzie ze sztywnego i trwałego materiału;Maksymalne pole powierzchni służącej ekspozycji reklamy - 1,0 m2;w formie tablicy płaskiej, stanowiącej panel tablicy kierującej kierowców w Systemie Informacji Miejskiej;Montaż wyłącznie dla działalności gospodarczej oddalonej od głównych ciągów komunikacyjnych;"
+        "conditions": "nieprzenośna, fundament poniżej poziomu terenu;w formie tablicy płaskiej, wykonanej na podkładzie ze sztywnego i trwałego materiału;Maksymalne pole powierzchni służącej ekspozycji reklamy - 1,0 m2;w formie tablicy płaskiej, stanowiącej panel tablicy kierującej kierowców w Systemie Informacji Miejskiej;Montaż wyłącznie dla działalności gospodarczej oddalonej od głównych ciągów komunikacyjnych"
     },
     {
         "zone": 2,
@@ -294,7 +294,7 @@ const criteria = [
         "width": null,
         "minArea": 12,
         "maxArea": 18,
-        "conditions": "nieprzenośny, fundament poniżej poziomu terenu;maksymalne pole powierzchni służącej ekspozycji reklamy formatu dużego;pole powierzchni służącej ekspozycji reklamy należy umieścić w górnej części konstrukcji urządzenia reklamowego;maksymalna wysokości totemu - 25,0 m;minimalną odległość dolnej krawędzi powierzchni służącej ekspozycji reklamy od poziomu terenu - 15 m;należy zachować co najmniej 5,0 m odległości od granicy działki;należy zachować co najmniej 100,0 m odległości pomiędzy totemami;"
+        "conditions": "nieprzenośny, fundament poniżej poziomu terenu;maksymalne pole powierzchni służącej ekspozycji reklamy formatu dużego;pole powierzchni służącej ekspozycji reklamy należy umieścić w górnej części konstrukcji urządzenia reklamowego;maksymalna wysokości totemu - 25,0 m;minimalną odległość dolnej krawędzi powierzchni służącej ekspozycji reklamy od poziomu terenu - 15 m;należy zachować co najmniej 5,0 m odległości od granicy działki;należy zachować co najmniej 100,0 m odległości pomiędzy totemami"
     },
     {
         "zone": 1,
@@ -305,7 +305,7 @@ const criteria = [
         "width": 1.5,
         "minArea": null,
         "maxArea": null,
-        "conditions": "nieprzenośny, fundament poniżej poziomu terenu;maksymalna całkowita wysokość słupa - 4,0 m;maksymalna szerokość boku prostopadłościanu lub średnica walca - 1,5 m mierzona na wysokości części ekspozycyjnej;Montaż przy zachowaniu co najmniej 50,0 m odległości pomiędzy słupami;"
+        "conditions": "nieprzenośny, fundament poniżej poziomu terenu;maksymalna całkowita wysokość słupa - 4,0 m;maksymalna szerokość boku prostopadłościanu lub średnica walca - 1,5 m mierzona na wysokości części ekspozycyjnej;Montaż przy zachowaniu co najmniej 50,0 m odległości pomiędzy słupami"
     },
     {
         "zone": 1,
@@ -316,7 +316,7 @@ const criteria = [
         "width": 1.8,
         "minArea": null,
         "maxArea": null,
-        "conditions": "nieprzenośna, fundament poniżej poziomu terenu;pole powierzchni służącej ekspozycji reklamy w formacie „euro size”;montaż przy zachowaniu co najmniej 30,0 m odległości pomiędzy gablotami; dopuszcza się zmniejszenie odległości, w sytuacji gdy kilka gablot stanowi spójnie zaprojektowaną grupę, przewidzianą w obrębie danej przestrzeni miejskiej;dopuszcza się gabloty ekspozycyjne typu CLP zintegrowane z wiatą przystankową, z wykluczeniem gablot przesłaniających wiaty od strony najazdowej;dopuszcza się gabloty ekspozycyjne typu CLP w formie ekranów świetlnych reklamowych;"
+        "conditions": "nieprzenośna, fundament poniżej poziomu terenu;pole powierzchni służącej ekspozycji reklamy w formacie „euro size”;montaż przy zachowaniu co najmniej 30,0 m odległości pomiędzy gablotami; dopuszcza się zmniejszenie odległości, w sytuacji gdy kilka gablot stanowi spójnie zaprojektowaną grupę, przewidzianą w obrębie danej przestrzeni miejskiej;dopuszcza się gabloty ekspozycyjne typu CLP zintegrowane z wiatą przystankową, z wykluczeniem gablot przesłaniających wiaty od strony najazdowej;dopuszcza się gabloty ekspozycyjne typu CLP w formie ekranów świetlnych reklamowych"
     },
     {
         "zone": 1,
@@ -327,7 +327,7 @@ const criteria = [
         "width": null,
         "minArea": null,
         "maxArea": null,
-        "conditions": "nieprzenośne, fundament poniżej poziomu terenu;maksymalna wysokość znaków - 3,0 m;znaki należy lokalizować na terenie założenia, które ma charakter powierzchniowy, w sposób wynikający z aranżacji zagospodarowania otoczenia;"
+        "conditions": "nieprzenośne, fundament poniżej poziomu terenu;maksymalna wysokość znaków - 3,0 m;znaki należy lokalizować na terenie założenia, które ma charakter powierzchniowy, w sposób wynikający z aranżacji zagospodarowania otoczenia"
     },
     {
         "zone": 1,
@@ -338,7 +338,7 @@ const criteria = [
         "width": null,
         "minArea": null,
         "maxArea": null,
-        "conditions": "przenośny;w formie pojedynczej tablicy pełnej, ustawionej na sztaludze, o całkowitej wysokości do 1,6 m lub w formie potykacza o całkowitej wysokości do 1,2 m;konstrukcja stojaka wykonana z drewna lub metalu;"
+        "conditions": "przenośny;w formie pojedynczej tablicy pełnej, ustawionej na sztaludze, o całkowitej wysokości do 1,6 m lub w formie potykacza o całkowitej wysokości do 1,2 m;konstrukcja stojaka wykonana z drewna lub metalu"
     },
     {
         "zone": 1,
@@ -349,7 +349,7 @@ const criteria = [
         "width": null,
         "minArea": null,
         "maxArea": null,
-        "conditions": "przenośny;w formie pojedynczej tablicy pełnej, ustawionej na sztaludze, o całkowitej wysokości do 1,6 m lub w formie potykacza o całkowitej wysokości do 1,2 m;konstrukcja stojaka wykonana z drewna lub metalu;"
+        "conditions": "przenośny;w formie pojedynczej tablicy pełnej, ustawionej na sztaludze, o całkowitej wysokości do 1,6 m lub w formie potykacza o całkowitej wysokości do 1,2 m;konstrukcja stojaka wykonana z drewna lub metalu"
     },
     {
         "zone": 1,
@@ -360,7 +360,7 @@ const criteria = [
         "width": null,
         "minArea": 0.25,
         "maxArea": 0.5,
-        "conditions": "przenośna;maksymalne pole powierzchni służącej ekspozycji reklamy nie większe od formatu drobnego;konstrukcja gabloty wykonana z drewna lub metalu;"
+        "conditions": "przenośna;maksymalne pole powierzchni służącej ekspozycji reklamy nie większe od formatu drobnego;konstrukcja gabloty wykonana z drewna lub metalu"
     },
     {
         "zone": 1,
@@ -371,7 +371,7 @@ const criteria = [
         "width": null,
         "minArea": null,
         "maxArea": null,
-        "conditions": "przenośna;Montaż na lambrekinie zadaszenia ogródka, lambrekinie parasola, rollbarze, przęśle ogrodzenia, donicy wolnostojącej, krześle, stole czy leżaku oraz na lambrekinie markizy lub zadaszenia kramu ulicznego;w formie monochromatycznych znaków bez tła;maksymalna wysokość znaków - 0,20 m;"
+        "conditions": "przenośna;Montaż na lambrekinie zadaszenia ogródka, lambrekinie parasola, rollbarze, przęśle ogrodzenia, donicy wolnostojącej, krześle, stole czy leżaku oraz na lambrekinie markizy lub zadaszenia kramu ulicznego;w formie monochromatycznych znaków bez tła;maksymalna wysokość znaków - 0,20 m"
     },
     {
         "zone": 1,
@@ -382,7 +382,436 @@ const criteria = [
         "width": null,
         "minArea": null,
         "maxArea": null,
-        "conditions": "przenośna;w formie ekspozytora, stojaka reklamowego, windera, plakatu, carriera pneumatycznego o powierzchni służącej ekspozycji reklamy maksymalnie formatu średniego, banera reklamowego o powierzchni służącej ekspozycji reklamy maksymalnie formatu średniego, ekranu projekcyjnego reklamowego i ekranu świetlnego reklamowego;;Ustawiona wyłącznie na terenie organizacji wydarzenia;Eksponowana podczas trwania wydarzenia lecz nie dłużej niż przez 14;"
+        "conditions": "przenośna;w formie ekspozytora, stojaka reklamowego, windera, plakatu, carriera pneumatycznego o powierzchni służącej ekspozycji reklamy maksymalnie formatu średniego, banera reklamowego o powierzchni służącej ekspozycji reklamy maksymalnie formatu średniego, ekranu projekcyjnego reklamowego i ekranu świetlnego reklamowego;;Ustawiona wyłącznie na terenie organizacji wydarzenia;Eksponowana podczas trwania wydarzenia lecz nie dłużej niż przez 14"
+    },
+    {
+        "zone": 1,
+        "carrier": "tablice",
+        "placement": "na obiektach",
+        "type": "Tablica reklamowa na elewacji kiosku ulicznego",
+        "height": null,
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
+        "conditions": "w formie tablicy reklamowej pełnej;na obiektach stylizowanych na zabytkowe nakazuje się lokalizację tablicy w formie stylizowanej;maksymalne pole powierzchni służącej ekspozycji reklamy - 30% powierzchni elewacji, na której tablica jest umieszczona"
+    },
+    {
+        "zone": 1,
+        "carrier": "tablice",
+        "placement": "na obiektach",
+        "type": "Tablica reklamowa na lambrekinach markiz",
+        "height": 0.2,
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
+        "conditions": "Markiza zainstalowana na elewacji budynku, nad witrynami, oknami lub wejściem do lokalu;w formie monochromatycznych znaków bez tła;maksymalna wysokość znaków - 0,20 m"
+    },
+    {
+        "zone": 2,
+        "carrier": "tablice",
+        "placement": "na obiektach",
+        "type": "Tablica reklamowa na elewacji kiosku ulicznego",
+        "height": null,
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
+        "conditions": "w formie tablicy reklamowej pełnej;maksymalne pole powierzchni służącej ekspozycji reklamy - 30% powierzchni elewacji, na której tablica jest umieszczona"
+    },
+    {
+        "zone": 2,
+        "carrier": "tablice",
+        "placement": "na obiektach",
+        "type": "Tablica reklamowa na lambrekinach markiz",
+        "height": 0.2,
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
+        "conditions": "Markiza zainstalowana na elewacji budynku, nad witrynami, oknami lub wejściem do lokalu;w formie monochromatycznych znaków bez tła;maksymalna wysokość znaków - 0,20 m"
+    },
+    {
+        "zone": 3,
+        "carrier": "tablice",
+        "placement": "na obiektach",
+        "type": "Tablica reklamowa na elewacji kiosku ulicznego",
+        "height": null,
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
+        "conditions": "w formie tablicy reklamowej pełnej;maksymalne pole powierzchni służącej ekspozycji reklamy - 30% powierzchni elewacji, na której tablica jest umieszczona"
+    },
+    {
+        "zone": 3,
+        "carrier": "tablice",
+        "placement": "na obiektach",
+        "type": "Tablica reklamowa na lambrekinach markiz",
+        "height": 0.2,
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
+        "conditions": "Markiza zainstalowana na elewacji budynku, nad witrynami, oknami lub wejściem do lokalu;w formie monochromatycznych znaków bez tła;maksymalna wysokość znaków - 0,20 m"
+    },
+    {
+        "zone": 1,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Tablica lub urządzenie reklamowe sytuowane w świetle witryny od strony zewnętrznej (budynki niezabytkowe)",
+        "height": null,
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
+        "conditions": "montaż w poziomie parteru;w formie znaków bez tła, znaków przestrzennych, kasetonu reklamowego lub neonu reklamowego;maksymalne pole powierzchni służącej ekspozycji reklamy - 30% powierzchni światła okna;całkowicie zawierająca się w granicach ościeża otworu;geometrię tablicy reklamowej lub urządzenia reklamowego należy dopasować do podziałów stolarki/ślusarki, przy czym tablicę lub urządzenie należy lokalizować w nadświetlu lub górnej części witryny, oddzielonej poziomym elementem konstrukcyjnym od części dolnej"
+    },
+    {
+        "zone": 1,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Tablica lub urządzenie reklamowe sytuowane w świetle witryny od strony zewnętrznej (budynki zabytkowe)",
+        "height": null,
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
+        "conditions": "montaż w poziomie parteru;w formie znaków bez tła, znaków przestrzennych lub neonu reklamowego;maksymalne pole powierzchni służącej ekspozycji reklamy - 30% powierzchni światła okna;całkowicie zawierająca się w granicach ościeża otworu;geometrię tablicy reklamowej lub urządzenia reklamowego należy dopasować do podziałów stolarki/ślusarki, przy czym tablicę lub urządzenie należy lokalizować w nadświetlu lub górnej części witryny, oddzielonej poziomym elementem konstrukcyjnym od części dolnej"
+    },
+    {
+        "zone": 1,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Tablica reklamowa sytuowana w świetle witryny od strony wewnętrznej",
+        "height": null,
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
+        "conditions": "montaż w poziomie parteru;w formie tablicy pełnej;maksymalne pole powierzchni służącej ekspozycji reklamy - 30% powierzchni światła okna;całkowicie zawierająca się w granicach ościeża otworu;Wycofana o nie mniej niż 0,2 m w stosunku do powierzchni szklenia"
+    },
+    {
+        "zone": 1,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Wyklejenie na elementach przeszklonych elewacji",
+        "height": null,
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
+        "conditions": "montaż w poziomie parteru;w formie monochromatycznych znaków bez tła;maksymalne pole powierzchni służącej ekspozycji reklamy - 20% powierzchni pojedynczej witryny, okna lub drzwi"
+    },
+    {
+        "zone": 1,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Gablota ekspozycyjna elewacyjna prezentująca ofertę gastronomiczną (obiekty niezabytkowe)",
+        "height": null,
+        "width": null,
+        "minArea": 0.25,
+        "maxArea": 0.5,
+        "conditions": "montaż w poziomie parteru;maksymalne pole powierzchni służącej ekspozycji reklamy równe formatowi drobnemu;dopuszcza się sytuowanie większej ilości gablot o ujednoliconej formie zewnętrznej, symetrycznie względem danego wejścia"
+    },
+    {
+        "zone": 1,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Gablota ekspozycyjna elewacyjna prezentująca ofertę gastronomiczną (obiekty zabytkowe)",
+        "height": null,
+        "width": null,
+        "minArea": 0.25,
+        "maxArea": 0.5,
+        "conditions": "montaż w poziomie parteru;maksymalne pole powierzchni służącej ekspozycji reklamy równe formatowi drobnemu;dopuszcza się sytuowanie większej ilości gablot o ujednoliconej formie zewnętrznej, symetrycznie względem danego wejścia w formie stylizowanej"
+    },
+    {
+        "zone": 1,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Gablota ekspozycyjna elewacyjna na budynkach użyteczności publicznej",
+        "height": 1.2,
+        "width": 1.8,
+        "minArea": null,
+        "maxArea": null,
+        "conditions": "montaż w poziomie parteru;pole powierzchni służącej ekspozycji reklamy w formacie „euro size”;montaż bezpośrednio na budynku bądź w odległości nie większej niż 0,2 m od ściany tego budynku;dopuszcza się lokalizację układu kilku gablot o ujednoliconej formie zewnętrznej"
+    },
+    {
+        "zone": 1,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Reklamowa siatka ochronna (budynki niezabytkowe)",
+        "height": null,
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
+        "conditions": "maksymalne pole powierzchni służącej ekspozycji reklamy - 30% powierzchni ogólnej siatki"
+    },
+    {
+        "zone": 1,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Reklamowa siatka ochronna (budynki zabytkowe)",
+        "height": null,
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
+        "conditions": "maksymalne pole powierzchni służącej ekspozycji reklamy - 30% powierzchni ogólnej siatki;pole powierzchni służącej ekspozycji reklamy na siatce ochronnej musi stanowić kompozycję z nadrukiem w postaci wizerunku remontowanej elewacji"
+    },
+    {
+        "zone": 1,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Flaga reklamowa zlokalizowana na elewacji",
+        "height": null,
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
+        "conditions": "minimalna odległość dolnej krawędzi flagi od poziomu terenu - 2,5 m;maksymalna odległość od elewacji do krańca flagi - 0,8 m dla elewacji o wysokości mniejszej niż 12,0 m oraz 1,0 m dla elewacji o wysokości większej lub równej 12,0 m;Montaż wzdłuż wysokości całej elewacji, prostopadle do jej lica, w sposób zgodny z podziałami architektonicznymi;górna krawędź flagi musi znajdować się poniżej dolnej krawędzi belkowania wieńczącego, gzymsu lub attyki;Montaż do konstrukcji kotwionej w elewacji;Montaż na elewacji w bezpośrednim sąsiedztwie wejścia do budynku"
+    },
+    {
+        "zone": 2,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Tablica lub urządzenie reklamowe sytuowane w świetle witryny od strony zewnętrznej",
+        "height": null,
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
+        "conditions": "montaż w poziomie parteru;w formie znaków bez tła, znaków przestrzennych, kasetonu reklamowego lub neonu reklamowego;maksymalne pole powierzchni służącej ekspozycji reklamy - 30% powierzchni światła okna;całkowicie zawierająca się w granicach ościeża otworu;geometrię tablicy reklamowej lub urządzenia reklamowego należy dopasować do podziałów stolarki/ślusarki, przy czym tablicę lub urządzenie należy lokalizować w nadświetlu lub górnej części witryny, oddzielonej poziomym elementem konstrukcyjnym od części dolnej"
+    },
+    {
+        "zone": 2,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Tablica reklamowa sytuowana w świetle witryny od strony wewnętrznej",
+        "height": null,
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
+        "conditions": "montaż w poziomie parteru;w formie tablicy pełnej;maksymalne pole powierzchni służącej ekspozycji reklamy – 40% powierzchni światła okna;całkowicie zawierająca się w granicach ościeża otworu;Wycofana o nie mniej niż 0,2 m w stosunku do powierzchni szklenia"
+    },
+    {
+        "zone": 2,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Wyklejenie na elementach przeszklonych elewacji",
+        "height": null,
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
+        "conditions": "montaż w poziomie parteru;w formie znaków bez tła;maksymalne pole powierzchni służącej ekspozycji reklamy – 30% powierzchni pojedynczej witryny, okna lub drzwi"
+    },
+    {
+        "zone": 2,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Gablota ekspozycyjna elewacyjna prezentująca ofertę gastronomiczną (obiekty niezabytkowe)",
+        "height": null,
+        "width": null,
+        "minArea": 0.5,
+        "maxArea": 3,
+        "conditions": "montaż w poziomie parteru;maksymalne pole powierzchni służącej ekspozycji reklamy równe formatowi małemu;dopuszcza się sytuowanie większej ilości gablot o ujednoliconej formie zewnętrznej, symetrycznie względem danego wejścia"
+    },
+    {
+        "zone": 2,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Gablota ekspozycyjna elewacyjna prezentująca ofertę gastronomiczną (obiekty zabytkowe)",
+        "height": null,
+        "width": null,
+        "minArea": 0.5,
+        "maxArea": 3,
+        "conditions": "montaż w poziomie parteru;maksymalne pole powierzchni służącej ekspozycji reklamy równe formatowi małemu;dopuszcza się sytuowanie większej ilości gablot o ujednoliconej formie zewnętrznej, symetrycznie względem danego wejścia w formie stylizowanej"
+    },
+    {
+        "zone": 2,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Gablota ekspozycyjna elewacyjna na budynkach użyteczności publicznej",
+        "height": 1.2,
+        "width": 1.8,
+        "minArea": null,
+        "maxArea": null,
+        "conditions": "montaż w poziomie parteru;pole powierzchni służącej ekspozycji reklamy w formacie „euro size”;montaż bezpośrednio na budynku bądź w odległości nie większej niż 0,2 m od ściany tego budynku;dopuszcza się lokalizację układu kilku gablot o ujednoliconej formie zewnętrznej"
+    },
+    {
+        "zone": 2,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Reklamowa siatka ochronna",
+        "height": null,
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
+        "conditions": "maksymalne pole powierzchni służącej ekspozycji reklamy - 30% powierzchni ogólnej siatki"
+    },
+    {
+        "zone": 2,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Flaga reklamowa zlokalizowana na elewacji",
+        "height": null,
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
+        "conditions": "minimalna odległość dolnej krawędzi flagi od poziomu terenu - 2,5 m;maksymalna odległość od elewacji do krańca flagi - 0,8 m dla elewacji o wysokości mniejszej niż 6,0 m oraz 1,0 m dla elewacji o wysokości większej lub równej 6,0 m;Montaż wzdłuż wysokości całej elewacji, prostopadle do jej lica, w sposób zgodny z podziałami architektonicznymi;górna krawędź flagi musi znajdować się poniżej dolnej krawędzi belkowania wieńczącego, gzymsu lub attyki;Montaż do konstrukcji kotwionej w elewacji;Montaż na elewacji w bezpośrednim sąsiedztwie wejścia do budynku"
+    },
+    {
+        "zone": 2,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Urządzenie reklamowe główne, równolegle do lica elewacji",
+        "height": null,
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
+        "conditions": "w formie znaków przestrzennych lub neonu reklamowego;maksymalna wysokość urządzenia reklamowego: 1/6 wysokości elewacji, lecz nie więcej niż 1,0 m dla elewacji o wysokości mniejszej niż 6,0 m,1/6 wysokości elewacji, lecz nie więcej niż 1,5 m dla elewacji o wysokości większej lub równej 6,0 m i mniejszej niż 12,0 m,1/8 wysokości elewacji, lecz nie więcej niż 2,5 m dla elewacji o wysokości większej lub równej 12,0 m i mniejszej niż 25,0 m,1/10 wysokości elewacji, lecz nie więcej niż 5,0 m dla elewacji o wysokości większej lub równej 25,0 m;montaż powyżej górnej krawędzi elewacji w maksymalnej odległości równej 0,5 wysokości znaków lub poniżej górnej krawędzi elewacji, tak aby całe urządzenie reklamowe mieściło się na powierzchni zawierającej się w 1/3 wysokości elewacji od jej górnej krawędzi;wielkość, geometrię i lokalizację urządzenia reklamowego na elewacji należy dopasować do podziałów architektonicznych elewacji;montaż na wspólnym poziomie w obrębie wszystkich elewacji budynku"
+    },
+    {
+        "zone": 2,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Billboard zlokalizowany na elewacji",
+        "height": null,
+        "width": null,
+        "minArea": 3,
+        "maxArea": 12,
+        "conditions": "pole powierzchni służącej ekspozycji reklamy formatu średniego;Montaż powyżej pierwszej kondygnacji i poniżej ostatniej kondygnacji dla budynków o wysokości większej niż 12,0 m i mniejszej lub równej 25,0 m;Montaż powyżej drugiej kondygnacji i poniżej ostatniej kondygnacji dla budynków o wysokości większej niż 25,0 m;Montaż na budynkach o wysokości powyżej 12,0 m;montaż na elewacjach szczytowych pozbawionych otworów okiennych i drzwiowych;miejsce lokalizacji billboardu należy dopasować do podziałów budynku na kondygnacje;na elewacji dopuszcza się lokalizację grupy billboardów w postaci zwartej kompozycji; nakazuje się zachowanie jednakowej formy, wielkości, geometrii, materiału wykonania dla pojedynczych billboardów wchodzących w skład kompozycji"
+    },
+    {
+        "zone": 2,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Urządzenie reklamowe główne, prostopadłe do lica elewacji",
+        "height": null,
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
+        "conditions": "montaż na budynkach użyteczności publiczne;w formie znaków przestrzennych lub neonu reklamowego;maksymalny wysięg urządzenia reklamowego - 1,5 m;minimalną odległość dolnej krawędzi urządzenia reklamowego od poziomu terenu - 2,5 m;wielkość, geometrię i lokalizację urządzenia reklamowego na elewacji należy dopasować do podziałów architektonicznych elewacji;montaż poniżej górnej krawędzi elewacji"
+    },
+    {
+        "zone": 2,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Grupa tablic reklamowych i urządzeń reklamowych równoległych do lica elewacji",
+        "height": null,
+        "width": null,
+        "minArea": 3,
+        "maxArea": 12,
+        "conditions": "montaż na budynkach użyteczności publiczne;w formie znaków bez tła mocowanych przy pomocy śrub dystansowych, znaków przestrzennych lub kasetonów reklamowych;maksymalne pole powierzchni służącej ekspozycji reklamy pojedynczej tablicy reklamowej lub urządzenia reklamowego wchodzącej w skład grupy równe formatowi średniemu;maksymalne pole powierzchni służącej ekspozycji reklamy dla grupy tablic reklamowych lub urządzeń reklamowych - 10% powierzchni elewacji powyżej poziomu parteru;montaż grupy tablic reklamowych i urządzeń reklamowych w postaci zwartej kompozycji na elewacji;nakazuje się zachowanie jednakowej formy, wielkości, geometrii i materiału wykonania dla pojedynczych tablic reklamowych i urządzeń reklamowych wchodzących w skład grupy"
+    },
+    {
+        "zone": 3,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Tablica lub urządzenie reklamowe sytuowane w świetle witryny od strony zewnętrznej",
+        "height": null,
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
+        "conditions": "montaż w poziomie parteru;w formie znaków bez tła, znaków przestrzennych, kasetonu reklamowego lub neonu reklamowego;maksymalne pole powierzchni służącej ekspozycji reklamy - 30% powierzchni światła okna;całkowicie zawierająca się w granicach ościeża otworu;geometrię tablicy reklamowej lub urządzenia reklamowego należy dopasować do podziałów stolarki/ślusarki, przy czym tablicę lub urządzenie należy lokalizować w nadświetlu lub górnej części witryny, oddzielonej poziomym elementem konstrukcyjnym od części dolnej"
+    },
+    {
+        "zone": 3,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Tablica reklamowa sytuowana w świetle witryny od strony wewnętrznej",
+        "height": null,
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
+        "conditions": "montaż w poziomie parteru;w formie tablicy pełnej;maksymalne pole powierzchni służącej ekspozycji reklamy – 40% powierzchni światła okna;całkowicie zawierająca się w granicach ościeża otworu;Wycofana o nie mniej niż 0,2 m w stosunku do powierzchni szklenia"
+    },
+    {
+        "zone": 3,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Wyklejenie na elementach przeszklonych elewacji",
+        "height": null,
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
+        "conditions": "montaż w poziomie parteru;w formie znaków bez tła;maksymalne pole powierzchni służącej ekspozycji reklamy – 30% powierzchni pojedynczej witryny, okna lub drzwi"
+    },
+    {
+        "zone": 3,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Gablota ekspozycyjna elewacyjna prezentująca ofertę gastronomiczną",
+        "height": null,
+        "width": null,
+        "minArea": 0.5,
+        "maxArea": 3,
+        "conditions": "montaż w poziomie parteru;maksymalne pole powierzchni służącej ekspozycji reklamy równe formatowi małemu;dopuszcza się sytuowanie większej ilości gablot o ujednoliconej formie zewnętrznej, symetrycznie względem danego wejścia"
+    },
+    {
+        "zone": 3,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Gablota ekspozycyjna elewacyjna na budynkach użyteczności publicznej",
+        "height": 1.2,
+        "width": 1.8,
+        "minArea": null,
+        "maxArea": null,
+        "conditions": "montaż w poziomie parteru;pole powierzchni służącej ekspozycji reklamy w formacie „euro size”;montaż bezpośrednio na budynku bądź w odległości nie większej niż 0,2 m od ściany tego budynku;dopuszcza się lokalizację układu kilku gablot o ujednoliconej formie zewnętrznej"
+    },
+    {
+        "zone": 3,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Reklamowa siatka ochronna",
+        "height": null,
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
+        "conditions": "maksymalne pole powierzchni służącej ekspozycji reklamy - 30% powierzchni ogólnej siatki"
+    },
+    {
+        "zone": 3,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Flaga reklamowa zlokalizowana na elewacji",
+        "height": null,
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
+        "conditions": "minimalna odległość dolnej krawędzi flagi od poziomu terenu - 2,5 m;maksymalna odległość od elewacji do krańca flagi - 0,8 m dla elewacji o wysokości mniejszej niż 8,0 m oraz 1,0 m dla elewacji o wysokości większej lub równej 8,0 m;Montaż wzdłuż wysokości całej elewacji, prostopadle do jej lica, w sposób zgodny z podziałami architektonicznymi;górna krawędź flagi musi znajdować się poniżej dolnej krawędzi belkowania wieńczącego, gzymsu lub attyki;Montaż do konstrukcji kotwionej w elewacji;Montaż na elewacji w bezpośrednim sąsiedztwie wejścia do budynku"
+    },
+    {
+        "zone": 3,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Urządzenie reklamowe główne, równolegle do lica elewacji",
+        "height": null,
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
+        "conditions": "w formie znaków przestrzennych lub neonu reklamowego;maksymalna wysokość urządzenia reklamowego: 1/5 wysokości elewacji, lecz nie więcej niż 1,0 m dla elewacji o wysokości mniejszej niż 6,0 m,1/6 wysokości elewacji, lecz nie więcej niż 1,5 m dla elewacji o wysokości większej lub równej 6,0 m i mniejszej niż 12,0 m,1/8 wysokości elewacji, lecz nie więcej niż 3 m dla elewacji o wysokości większej lub równej 12,0 m i mniejszej niż 25,0 m,1/10 wysokości elewacji, lecz nie więcej niż 6,0 m dla elewacji o wysokości większej lub równej 25,0 m;montaż powyżej górnej krawędzi elewacji w maksymalnej odległości równej 0,5 wysokości znaków lub poniżej górnej krawędzi elewacji, tak aby całe urządzenie reklamowe mieściło się na powierzchni zawierającej się w 1/3 wysokości elewacji od jej górnej krawędzi;wielkość, geometrię i lokalizację urządzenia reklamowego na elewacji należy dopasować do podziałów architektonicznych elewacji;montaż na wspólnym poziomie w obrębie wszystkich elewacji budynku"
+    },
+    {
+        "zone": 3,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Billboard zlokalizowany na elewacji",
+        "height": null,
+        "width": null,
+        "minArea": 12,
+        "maxArea": 18,
+        "conditions": "pole powierzchni służącej ekspozycji reklamy formatu dużego;Montaż powyżej pierwszej kondygnacji i poniżej ostatniej kondygnacji dla budynków o wysokości większej niż 12,0 m i mniejszej lub równej 25,0 m;Montaż powyżej drugiej kondygnacji i poniżej ostatniej kondygnacji dla budynków o wysokości większej niż 25,0 m;Montaż na budynkach o wysokości powyżej 12,0 m;montaż na elewacjach szczytowych pozbawionych otworów okiennych i drzwiowych;miejsce lokalizacji billboardu należy dopasować do podziałów budynku na kondygnacje;na elewacji dopuszcza się lokalizację grupy billboardów w postaci zwartej kompozycji; nakazuje się zachowanie jednakowej formy, wielkości, geometrii, materiału wykonania dla pojedynczych billboardów wchodzących w skład kompozycji"
+    },
+    {
+        "zone": 3,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Urządzenie reklamowe główne, prostopadłe do lica elewacji",
+        "height": null,
+        "width": null,
+        "minArea": null,
+        "maxArea": null,
+        "conditions": "montaż na budynkach użyteczności publiczne;w formie znaków przestrzennych podświetlonych lub neonu reklamowego;maksymalny wysięg urządzenia reklamowego - 1,5 m;minimalną odległość dolnej krawędzi urządzenia reklamowego od poziomu terenu - 2,5 m;wielkość, geometrię i lokalizację urządzenia reklamowego na elewacji należy dopasować do podziałów architektonicznych elewacji;montaż poniżej górnej krawędzi elewacji"
+    },
+    {
+        "zone": 3,
+        "carrier": "tablice",
+        "placement": "na budynkach",
+        "type": "Grupa tablic reklamowych i urządzeń reklamowych równoległych do lica elewacji",
+        "height": null,
+        "width": null,
+        "minArea": 3,
+        "maxArea": 12,
+        "conditions": "montaż na budynkach użyteczności publiczne;w formie znaków bez tła mocowanych przy pomocy śrub dystansowych, znaków przestrzennych lub kasetonów reklamowych;maksymalne pole powierzchni służącej ekspozycji reklamy pojedynczej tablicy reklamowej lub urządzenia reklamowego wchodzącej w skład grupy równe formatowi średniemu;maksymalne pole powierzchni służącej ekspozycji reklamy dla grupy tablic reklamowych lub urządzeń reklamowych - 10% powierzchni elewacji powyżej poziomu parteru;montaż grupy tablic reklamowych i urządzeń reklamowych w postaci zwartej kompozycji na elewacji;nakazuje się zachowanie jednakowej formy, wielkości, geometrii i materiału wykonania dla pojedynczych tablic reklamowych i urządzeń reklamowych wchodzących w skład grupy"
     }
 ]
 

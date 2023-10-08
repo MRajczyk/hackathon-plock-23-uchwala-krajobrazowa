@@ -26,9 +26,12 @@ const carriers = [
 const locations = ['na budynkach', 'na obiektach', 'wolnostojące'];
 const types = ['Słup ogłoszeniowo-reklamowy', 'Gablota ekspozycyjna typu City Light Poster (CLP)', 'Stojak reklamowy - sztaluga', 'Stojak reklamowy - potykacz', 'Billboard'];
 
+
 const street = ref('');
 const buildingNumber = ref('');
 const failedZoneFetch = ref(false);
+
+const iterator = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 const zone = ref("");
 const carrier = ref("");
@@ -39,13 +42,15 @@ const height = ref("");
 const width = ref("");
 
 const result = ref(false);
-const msg = ref("");
+const errors = ref([]);
 const conditions = ref([]);
 
 const showTabsFlag = ref(0);
 const mapUnitialised = ref(true);
 
-function isValidAd(zone, carrier, placement, type, height, width) { //todo: rename
+function isValidAd(zone, carrier, placement, type, height, width) {
+  errors.value = [];
+  conditions.value = [];
   let area;
   if (height && width) {
     area = height * width;
@@ -59,30 +64,28 @@ function isValidAd(zone, carrier, placement, type, height, width) { //todo: rena
   );
 
   if (filteredCriteria.length !== 1) {
-    msg.value = "Reklama nie spełnia wymagań";
-    return false;
+    errors.value.push("Podany typ reklamy nie może znajdować się w wybranym obszarze");
   }
 
   const criterion = filteredCriteria[0];
 
   if (criterion.height && (criterion.height < height)) {
-    msg.value = "Reklama nie spełnia wymagań";
-    return false;
+    errors.value.push("Reklama jest zbyt wysoka");
   }
   if (criterion.width && (criterion.width < width)) {
-    msg.value = "Reklama nie spełnia wymagań";
-    return false;
+    errors.value.push("Reklama jest zbyt szeroka");
   }
 
   if (criterion.minArea && (criterion.minArea > area)) {
-    msg.value = "Reklama nie spełnia wymagań";
-    return false;
+    errors.value.push("Reklama ma zbyt małą powierzchnię");
   }
   if (criterion.maxArea && (criterion.maxArea < area)) {
-    msg.value = "Reklama nie spełnia wymagań";
-    return false;
+    errors.value.push("Reklama ma zbyt dużą powierzchnię");
   }
 
+  if(errors.value.length > 0) {
+    return false;
+  }
   conditions.value = criterion.conditions.split(';');
   return true;
 }
@@ -104,6 +107,21 @@ function fetchZone() {
 
 function setShowTabsFlag(value) {
   showTabsFlag.value = value;
+}
+
+function imageExists(img_num) {
+  const http = new XMLHttpRequest();
+  http.open('HEAD', "/tablice/Obszar " + zone.value + "/" + location.value + "/" + img_num + ".jpg", false);
+  http.send();
+  return http.status !== 404;
+}
+
+function concatenateImagePath(x) {
+   return "/tablice/Obszar " + zone.value + "/" + location.value + "/" + x + ".jpg";
+}
+
+function countFee(days) {
+  return ((height.value * width.value * 40 * 0.28 * days) + (40 * 3.14 * days)).toFixed(2);
 }
 
 onMounted(() => {
@@ -163,7 +181,9 @@ onUnmounted(() => {
     <div id="myModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <p>Some text in the Modal..</p>
+        <div v-for="x in iterator">
+          <img v-if="imageExists(x)" :src="concatenateImagePath(x)">
+        </div>
       </div>
     </div>
     <div class="check-ad-container">
@@ -233,9 +253,24 @@ onUnmounted(() => {
           <span>Sprawdź</span>
           <img src="/survey.png" style="margin-left:10px;" alt="survey icon"/>
         </button>
-        <ul>
-          <li v-for="condition in conditions">{{condition}}</li>
-        </ul>
+        <div v-if="conditions.length > 0 && errors.length === 0" class="success">
+          Brawo! Reklama spełnia podstawowe kryteria. Teraz upewnij się, że nie łamie ona żadnego z poniższych dodatkowych przepisów:
+          <ul style="background-color: inherit">
+            <li v-for="condition in conditions" style="background-color: inherit">{{condition}}</li>
+          </ul>
+        </div>
+        <div v-if="errors.length > 0" class="failure">
+          Niestety, ale reklama nie spełniła podstawowych wymagań wymienionych poniżej:
+          <ul style="background-color: inherit">
+            <li v-for="error in errors" style="background-color: inherit">{{error}}</li>
+          </ul>
+          <div v-if="height && width" style="background-color: inherit">
+            Dzienna kara za utrzymywanie danej reklamy wynosi: {{countFee(1)}}zł.
+          </div>
+          <div v-else style="background-color: inherit">
+            Aby zobaczyć dzienną karę za wywieszenie reklamy uzupełnij informacje o wysokości i szerokości.
+          </div>
+        </div>
       </div>
       <p style="border-bottom: 1px solid #D6D6D6; margin-bottom: 10px; margin-top: 10px"></p>
       <a href="https://nowy.plock.eu/slowniczek/">Nie rozumiesz czegoś? Sprawdź słowniczek!</a>
@@ -370,4 +405,18 @@ onUnmounted(() => {
     text-decoration: none;
     cursor: pointer;
   }
+
+.success {
+  margin-top: 20px;
+  background-color: #D4EDDA;
+  border: 1px solid green;
+  padding: 10px 10px 0 10px;
+}
+
+.failure {
+  margin-top: 20px;
+  background-color: #F8D7DA;
+  border: 1px solid red;
+  padding: 10px;
+}
 </style>
