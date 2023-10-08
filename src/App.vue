@@ -71,17 +71,17 @@ function isValidAd(zone, carrier, placement, type, height, width) {
   const criterion = filteredCriteria[0];
 
   if (criterion.height && (criterion.height < height)) {
-    errors.value.push("Reklama jest zbyt wysoka");
+    errors.value.push("Reklama jest zbyt wysoka - maksymalna wysokość wynosi " + criterion.height + "m");
   }
   if (criterion.width && (criterion.width < width)) {
-    errors.value.push("Reklama jest zbyt szeroka");
+    errors.value.push("Reklama jest zbyt szeroka - maksymalna szerokość wynosi " + criterion.width + "m");
   }
 
   if (criterion.minArea && (criterion.minArea > area)) {
-    errors.value.push("Reklama ma zbyt małą powierzchnię");
+    errors.value.push("Reklama ma zbyt małą powierzchnię - minimalna powierzchnia wynosi " + criterion.minArea + "m2");
   }
   if (criterion.maxArea && (criterion.maxArea < area)) {
-    errors.value.push("Reklama ma zbyt dużą powierzchnię");
+    errors.value.push("Reklama ma zbyt dużą powierzchnię - maksymalna powierzchnia wynosi " + criterion.maxArea + "m2");
   }
 
   if(errors.value.length > 0) {
@@ -131,6 +131,7 @@ onMounted(() => {
   const span = document.getElementsByClassName("close")[0];
 
   btn.onclick = function() {
+    // setShowTabsFlag(1);
     modal.style.display = "block";
   }
 
@@ -379,7 +380,7 @@ onUnmounted(() => {
   .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 1001;
     left: 0;
     top: 0;
     width: 100%;
