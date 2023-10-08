@@ -16,53 +16,6 @@ function hideModal(event) {
   }
 }
 
-onMounted(() => {
-  const modal = document.getElementById("myModal");
-  const btn = document.getElementById("myBtn");
-  const span = document.getElementsByClassName("close")[0];
-
-  btn.onclick = function() {
-    modal.style.display = "block";
-  }
-
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
-
-  window.addEventListener('click', hideModal);
-
-  axios.get('http://localhost:3000/addresses')
-      .then(function (response) {
-        adresyStrefa = response.data;
-      })
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-      })
-      .finally(function () {
-        // always executed
-      });
-
-  const map = L.map('map').setView([51.505, -0.09], 13);
-
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(map);
-
-  zonesPolygons.forEach(elem => {
-    elem['polygon'] = L.polygon(elem.latlngs, {color: elem.color})
-        .on('click', () => zone.value = elem.id).addTo(map);
-  })
-
-  let greatestZone = zonesPolygons.reduce((max, elem) => (elem.id > max.id ? elem : max));
-  map.fitBounds(greatestZone.polygon.getBounds());
-})
-
-onUnmounted(() => {
-  window.removeEventListener('click', hideModal)
-})
-
 const zones = [1, 2, 3];
 const carriers = [
   'tablice',
@@ -72,8 +25,6 @@ const carriers = [
 ];
 const locations = ['na budynkach', 'na obiektach', 'wolnostojące'];
 const types = ['Słup ogłoszeniowo-reklamowy', 'Gablota ekspozycyjna typu City Light Poster (CLP)', 'Stojak reklamowy - sztaluga', 'Stojak reklamowy - potykacz', 'Billboard'];
-
-const result = ref("");
 
 const street = ref('');
 const buildingNumber = ref('');
@@ -92,6 +43,7 @@ const msg = ref("");
 const conditions = ref([]);
 
 const showTabsFlag = ref(0);
+const mapUnitialised = ref(true);
 
 function isValidAd(zone, carrier, placement, type, height, width) { //todo: rename
   let area;
@@ -107,7 +59,7 @@ function isValidAd(zone, carrier, placement, type, height, width) { //todo: rena
   );
 
   if (filteredCriteria.length !== 1) {
-    result.value = "Reklama nie spełnia wymagań";
+    msg.value = "Reklama nie spełnia wymagań";
     return false;
   }
 
@@ -154,6 +106,54 @@ function setShowTabsFlag(value) {
   showTabsFlag.value = value;
 }
 
+onMounted(() => {
+  const modal = document.getElementById("myModal");
+  const btn = document.getElementById("myBtn");
+  const span = document.getElementsByClassName("close")[0];
+
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.addEventListener('click', hideModal);
+
+  axios.get('http://localhost:3000/addresses')
+      .then(function (response) {
+        adresyStrefa = response.data;
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+      .finally(function () {
+        // always executed
+      });
+
+  const map = L.map('map').setView([51.505, -0.09], 13);
+
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+
+  zonesPolygons.forEach(elem => {
+    elem['polygon'] = L.polygon(elem.latlngs, {color: elem.color})
+        .on('click', () => zone.value = elem.id).addTo(map);
+  })
+
+  let greatestZone = zonesPolygons.reduce((max, elem) => (elem.id > max.id ? elem : max));
+  map.fitBounds(greatestZone.polygon.getBounds());
+
+  mapUnitialised.value = false;
+})
+
+onUnmounted(() => {
+  window.removeEventListener('click', hideModal)
+})
 </script>
 
 <template>
@@ -193,7 +193,7 @@ function setShowTabsFlag(value) {
         </button>
         <p v-if="failedZoneFetch">Nie znaleziono strefy. Wybierz strefę manualnie.</p>
       </div>
-      <div v-if="showTabsFlag===2" id="map"></div>
+      <div v-show="showTabsFlag === 2 || mapUnitialised" id="map"></div>
       <p style="border-bottom: 1px solid #D6D6D6; margin-bottom: 10px; margin-top: 10px"></p>
       <div>
         <label style="display:block">Nośnik</label>
