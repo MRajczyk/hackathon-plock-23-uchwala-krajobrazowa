@@ -1,11 +1,32 @@
 <script setup>
-import { ref, onMounted } from "vue";
+import {ref, onMounted, onUnmounted} from "vue";
 import axios from "axios";
 import criteria from "./kryteria";
 
 let adresyStrefa;
 
+function hideModal(event) {
+  const modal = document.getElementById("myModal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
+
 onMounted(() => {
+  const modal = document.getElementById("myModal");
+  const btn = document.getElementById("myBtn");
+  const span = document.getElementsByClassName("close")[0];
+
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.addEventListener('click', hideModal);
+
   axios.get('http://localhost:3000/addresses')
       .then(function (response) {
         adresyStrefa = response.data;
@@ -17,6 +38,10 @@ onMounted(() => {
       .finally(function () {
         // always executed
       });
+})
+
+onUnmounted(() => {
+  window.removeEventListener('click', hideModal)
 })
 
 const zones = [1, 2, 3];
@@ -111,6 +136,12 @@ function setShowTabsFlag(value) {
   <header>
   </header>
   <main>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
+      </div>
+    </div>
     <div class="check-ad-container">
       <h1>SPRAWDŹ LEGALNOŚĆ REKLAMY</h1>
       <div>
@@ -157,7 +188,10 @@ function setShowTabsFlag(value) {
       </div>
 
       <div>
-        <label style="display:block">Typ</label>
+        <div style="display:block">
+          <label>Typ</label>&nbsp;
+          <button id="myBtn">?</button>
+        </div>
         <select name="types" v-model="type">
           <option v-for="l in types">{{l}}</option>
         </select>
@@ -249,8 +283,9 @@ function setShowTabsFlag(value) {
   }
 
   select {
+    width: 100%;
     box-sizing: border-box;
-    height: 24px;
+    height: 30px;
     margin-top: 5px;
     border-color: rgba(0, 0, 0, 0.125);
     border-style: solid;
@@ -263,8 +298,9 @@ function setShowTabsFlag(value) {
   }
 
   input {
+    width: 100%;
     box-sizing: border-box;
-    height: 24px;
+    height: 30px;
     margin-top: 5px;
     border-color: #ced4da;
     border-style: solid;
@@ -273,5 +309,38 @@ function setShowTabsFlag(value) {
     border-right-width: 0.0625rem;
     border-top-width: 0.0625rem;
     border-radius: 0.25rem;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
   }
 </style>
